@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://n53injmxv20a"]
+
+[ext_resource type="Script" uid="uid://dd72644bl8g3u" path="res://Scripts/Gameplay/SpawnerElectrons.gd" id="1_gcxqf"]
+[ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="2_dwnmq"]
+
+[node name="SpawnerElectrons" type="Node2D"]
+script = ExtResource("1_gcxqf")
+numberToSpawn = 50
+electron = ExtResource("2_dwnmq")

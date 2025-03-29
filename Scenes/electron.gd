@@ -1,12 +1,14 @@
 extends RigidBody2D
 
+class_name Electron
+
 var vel = Vector2(200, 200)
+var startVelocity = Vector2(300, -200)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
 	add_to_group("electrons")
-	linear_velocity = Vector2(300, -200)
+	linear_velocity = startVelocity
 
 @onready var all_electrons = get_tree().get_nodes_in_group("electrons")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
