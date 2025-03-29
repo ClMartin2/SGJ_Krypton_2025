@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgxaiakgfw1gp"]
+[gd_scene load_steps=4 format=3 uid="uid://cgxaiakgfw1gp"]
 
-[ext_resource type="PackedScene" uid="uid://ckxqsxhtmyqvm" path="res://UI/ButtonLevel.tscn" id="1_q0ago"]
+[ext_resource type="StyleBox" uid="uid://cnan33sqmeiys" path="res://UI/StyleBoxes/StyleBoxBGStartMenu.tres" id="1_omsb3"]
+[ext_resource type="PackedScene" uid="uid://ckxqsxhtmyqvm" path="res://Scenes/UI/ButtonLevel.tscn" id="1_q0ago"]
 [ext_resource type="FontFile" uid="uid://bwkmo5ka1bq7f" path="res://Fonts/GameBubble.ttf" id="2_iky6m"]
 
 [node name="StartMenu" type="CanvasLayer"]
@@ -13,11 +14,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="BG" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_omsb3")
+
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.147
+offset_top = 25.0
 offset_bottom = 0.160004
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_iky6m")

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckxqsxhtmyqvm"]
 
-[ext_resource type="Script" uid="uid://bo6d27p5mf7l8" path="res://UI/ButtonLevel.gd" id="1_14ph0"]
+[ext_resource type="Script" uid="uid://bo6d27p5mf7l8" path="res://Scripts/UI/ButtonLevel.gd" id="1_14ph0"]
 [ext_resource type="FontFile" uid="uid://bwkmo5ka1bq7f" path="res://Fonts/GameBubble.ttf" id="1_n30s0"]
-[ext_resource type="StyleBox" uid="uid://dmyw2k8m766u3" path="res://UI/StyleBox/StyleBoxButtonLevel.tres" id="3_cr2ki"]
+[ext_resource type="StyleBox" uid="uid://dmyw2k8m766u3" path="res://UI/StyleBoxes/StyleBoxButtonLevel.tres" id="3_cr2ki"]
 
 [node name="Level" type="Button"]
 anchors_preset = 15
