@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://8xk0qr6cdihm"]
+
+[ext_resource type="Script" uid="uid://c704yv64ny54e" path="res://temp_min.gd" id="1_cs83r"]
+[ext_resource type="Texture2D" uid="uid://72u3vilyn2cy" path="res://icon.svg" id="2_3ritv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ljtp"]
+size = Vector2(88, 60)
+
+[node name="temp_min" type="Area2D"]
+light_mask = 8
+visibility_layer = 2
+script = ExtResource("1_cs83r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2ljtp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.5, 0)
+scale = Vector2(0.679688, 0.46875)
+texture = ExtResource("2_3ritv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
