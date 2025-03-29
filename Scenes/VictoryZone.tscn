@@ -17,7 +17,4 @@ shape = SubResource("RectangleShape2D_13e7s")
 position = Vector2(-11, 2)
 polygon = PackedVector2Array(-189, -109, -195, 92, 215, 95, 210, -103)
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="child_entered_tree" from="CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]

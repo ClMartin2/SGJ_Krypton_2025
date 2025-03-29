@@ -8,3 +8,4 @@ script = ExtResource("1_gcxqf")
 radius = 100
 numberToSpawn = 50
 electron = ExtResource("2_dwnmq")
+color = Color(0, 1, 0.285124, 1)

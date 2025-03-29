@@ -4,14 +4,12 @@ extends Node2D
 @export var radius = 10
 @export var numberToSpawn = 1
 @export var electron : PackedScene
-@export var RandomRangeXVelocity := Vector2(-300,300)
-@export var RandomRangeYVelocity := Vector2(-100,100)
+@export var randomRangeXVelocity := Vector2(-300,300)
+@export var randomRangeYVelocity := Vector2(-100,100)
+@export var color := Color(0, 242, 69)
 
 func drawCircleSpawn() -> void:
-	var center = Vector2.ZERO
-	var color = Color(1,0,0)
-	
-	draw_circle(center,radius,color)
+	draw_circle(Vector2.ZERO,radius,color)
 
 func _draw():
 	if Engine.is_editor_hint():
@@ -34,8 +32,8 @@ func Spawn():
 		object.position = randomPosition
 				
 		var electron = object as Electron
-		var XVelocity = randf_range(RandomRangeXVelocity.x,RandomRangeXVelocity.y)
-		var YVelocity = randf_range(RandomRangeYVelocity.x,RandomRangeYVelocity.y)
+		var XVelocity = randf_range(randomRangeXVelocity.x,randomRangeXVelocity.y)
+		var YVelocity = randf_range(randomRangeYVelocity.x,randomRangeYVelocity.y)
 		var RandomVelocity = Vector2(XVelocity,YVelocity)
 		electron.startVelocity = RandomVelocity
 		
