@@ -3,7 +3,7 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if(body is Player):
-		SceneSwitcher.switch_scene(victoryScene)
+		instance_object()
 	
 func instance_object():
 	var object = victoryScene.instantiate()
