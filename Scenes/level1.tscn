@@ -1,8 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmd34xmqjnm7h"]
+[gd_scene load_steps=9 format=3 uid="uid://bmd34xmqjnm7h"]
 
 [ext_resource type="PackedScene" uid="uid://cj7v7l2hd3awu" path="res://scenes/player.tscn" id="1_wwpf4"]
 [ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://scenes/electron.tscn" id="2_m7ahb"]
 [ext_resource type="Texture2D" uid="uid://72u3vilyn2cy" path="res://icon.svg" id="3_m7ahb"]
+
+[sub_resource type="Curve" id="Curve_m7ahb"]
+_data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_dwgg1"]
+curve = SubResource("Curve_m7ahb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m7ahb"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 5.0
+scale_max = 5.0
+alpha_curve = SubResource("CurveTexture_dwgg1")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwgg1"]
 size = Vector2(5000, 200)
@@ -19,6 +33,9 @@ position = Vector2(535, 322)
 zoom = Vector2(0.6, 0.6)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Player"]
+process_material = SubResource("ParticleProcessMaterial_m7ahb")
 
 [node name="Electrons" type="Node" parent="."]
 

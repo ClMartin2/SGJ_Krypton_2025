@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 var vel = Vector2(0.5,0.5)
 
