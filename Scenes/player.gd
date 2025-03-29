@@ -18,6 +18,10 @@ func Pause():
 	pause = true
 	remove_from_group("electrons")
 	velocity = Vector2.ZERO
+	
+func Resume():
+	pause = false
+	add_to_group("electrons")
 
 func get_closest_electron() -> RigidBody2D:
 	var closest = null

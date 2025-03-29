@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DataLevel" load_steps=2 format=3 uid="uid://x6bbsvu77f1s"]
+
+[ext_resource type="Script" uid="uid://c5po5byxxp4s0" path="res://Scripts/Ressources/R_DataLevele.gd" id="1_5jd7y"]
+
+[resource]
+script = ExtResource("1_5jd7y")
+txtEndLevel = "Cool le lyon c'est la fin"
+txtStartLevel = "Le feu au coeur"
+levelAssociate = "level3"
+metadata/_custom_type_script = "uid://c5po5byxxp4s0"
