@@ -1,3 +1,4 @@
+@tool
 extends Node2D
 
 @export var radius = 10
@@ -5,6 +6,16 @@ extends Node2D
 @export var electron : PackedScene
 @export var RandomRangeXVelocity := Vector2(-300,300)
 @export var RandomRangeYVelocity := Vector2(-100,100)
+
+func drawCircleSpawn() -> void:
+	var center = Vector2.ZERO
+	var color = Color(1,0,0)
+	
+	draw_circle(center,radius,color)
+
+func _draw():
+	if Engine.is_editor_hint():
+		drawCircleSpawn()
 
 func _ready() -> void:
 	Spawn()

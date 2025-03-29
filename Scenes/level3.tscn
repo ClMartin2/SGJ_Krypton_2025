@@ -253,11 +253,10 @@ metadata/_edit_lock_ = true
 
 [node name="SpawnerElectrons" parent="." instance=ExtResource("4_d77hw")]
 position = Vector2(65, -1720)
-radius = 15
 numberToSpawn = 20
 
 [node name="SpawnerElectrons2" parent="." instance=ExtResource("4_d77hw")]
-position = Vector2(1030, -1766)
+position = Vector2(1036, -1766)
 numberToSpawn = 20
 
 [node name="SpawnerElectrons3" parent="." instance=ExtResource("4_d77hw")]
