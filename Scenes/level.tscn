@@ -30,29 +30,127 @@ bounce = 1.0
 [node name="Player" parent="." instance=ExtResource("1_2q6dc")]
 position = Vector2(535, 322)
 
-[node name="Electron" parent="." instance=ExtResource("2_w7c3h")]
+[node name="Electrons" type="Node" parent="."]
+
+[node name="Electron" parent="Electrons" instance=ExtResource("2_w7c3h")]
 position = Vector2(286, 165)
 
-[node name="Electron2" parent="." instance=ExtResource("2_w7c3h")]
+[node name="Electron2" parent="Electrons" instance=ExtResource("2_w7c3h")]
 position = Vector2(1174, 120)
 
-[node name="Electron3" parent="." instance=ExtResource("2_w7c3h")]
+[node name="Electron3" parent="Electrons" instance=ExtResource("2_w7c3h")]
 position = Vector2(329, 521)
 
-[node name="Electron4" parent="." instance=ExtResource("2_w7c3h")]
+[node name="Electron4" parent="Electrons" instance=ExtResource("2_w7c3h")]
 position = Vector2(900, 356)
 
-[node name="Electron5" parent="." instance=ExtResource("2_w7c3h")]
+[node name="Electron5" parent="Electrons" instance=ExtResource("2_w7c3h")]
 position = Vector2(231, 382)
 
-[node name="Electron6" parent="." instance=ExtResource("2_w7c3h")]
+[node name="Electron6" parent="Electrons" instance=ExtResource("2_w7c3h")]
 position = Vector2(1022, 461)
 
-[node name="Electron7" parent="." instance=ExtResource("2_w7c3h")]
+[node name="Electron7" parent="Electrons" instance=ExtResource("2_w7c3h")]
 position = Vector2(780, 245)
 
-[node name="Electron8" parent="." instance=ExtResource("2_w7c3h")]
-position = Vector2(675, 506)
+[node name="Electron8" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(711, 441)
+
+[node name="Electron10" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(565, 511)
+
+[node name="Electron11" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(448, 145)
+
+[node name="Electron12" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(155, 274)
+
+[node name="Electron13" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(105, 519)
+
+[node name="Electron14" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(144, 651)
+
+[node name="Electron15" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(786, 657)
+
+[node name="Electron16" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(1065, 595)
+
+[node name="Electron17" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(934, 229)
+
+[node name="Electron18" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(633, 224)
+
+[node name="Electron19" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(435, 416)
+
+[node name="Electron20" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(458, 576)
+
+[node name="Electron21" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(1155, 414)
+
+[node name="Electron22" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(1039, 261)
+
+[node name="Electron23" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(193, 540)
+
+[node name="Electron24" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(94, 369)
+
+[node name="Electron25" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(171, 128)
+
+[node name="Electron26" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(350, 84)
+
+[node name="Electron27" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(975, 117)
+
+[node name="Electron28" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(1165, 645)
+
+[node name="Electron29" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(673, 332)
+
+[node name="Electron30" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(1147, 511)
+
+[node name="Electron31" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(949, 656)
+
+[node name="Electron32" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(549, 134)
+
+[node name="Electron33" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(545, 629)
+
+[node name="Electron34" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(404, 659)
+
+[node name="Electron35" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(338, 284)
+
+[node name="Electron36" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(87, 147)
+
+[node name="Electron37" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(284, 658)
+
+[node name="Electron38" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(680, 603)
+
+[node name="Electron39" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(1100, 323)
+
+[node name="Electron40" parent="Electrons" instance=ExtResource("2_w7c3h")]
+position = Vector2(801, 102)
+
+[node name="Electron9" parent="." instance=ExtResource("2_w7c3h")]
+position = Vector2(820, 553)
 
 [node name="Borders" type="Node2D" parent="."]
 
