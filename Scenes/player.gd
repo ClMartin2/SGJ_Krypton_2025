@@ -13,6 +13,10 @@ func Pause():
 	pause = true
 	remove_from_group("electrons")
 	velocity = Vector2.ZERO
+	
+func Resume():
+	pause = false
+	add_to_group("electrons")
 
 func _process(delta: float) -> void:
 	if(pause):

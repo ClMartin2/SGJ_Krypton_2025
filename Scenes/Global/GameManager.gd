@@ -1,13 +1,23 @@
 extends Node
-
-var player : Player
-
-func _ready() -> void:
-	player = GetPlayer()
 	
 func PauseGame():
-	player.Pause();
+	GetPlayer().Pause()
 	
+func ResumeGame():
+	GetPlayer().Resume()
+	
+func GetTxtEndLevel() -> String:
+	var dataLevel = load("res://Resources/Data_" + GetCurrentScene()
+	 +".tres") as DataLevel
+	return dataLevel.txtEndLevel
+	
+func GetTxtStartLevel():
+	var dataLevel = load("res://Resources/Data_" + GetCurrentScene()
+	 +".tres") as DataLevel
+	return dataLevel.txtStartLevel
+	
+func GetCurrentScene():
+	return SceneSwitcher.current_scene.name
 
 func GetPlayer():
 	var player = get_tree().root.find_child("Player",true,false)
