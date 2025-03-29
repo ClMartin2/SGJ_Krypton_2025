@@ -1,6 +1,6 @@
 extends Button
 
-@export var levelToLoad = "res://Scenes/Levels/Level1.tscn"
+@export var levelToLoad : PackedScene
 
 #func _on_resized() -> void:
 	#adjustTextSize()

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://fie547cr5kdm"]
 
 [ext_resource type="PackedScene" uid="uid://b3u5q3gues8mk" path="res://Scenes/UI/ButtonGoBackToStartMenu.tscn" id="1_xw0g3"]
-[ext_resource type="PackedScene" uid="uid://cj7v7l2hd3awu" path="res://Scenes/Player.tscn" id="2_uojc1"]
+[ext_resource type="PackedScene" uid="uid://8vrfmvxa0vup" path="res://Scenes/Player.tscn" id="2_uojc1"]
 [ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="3_3k5qk"]
 [ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="4_3k5qk"]
 

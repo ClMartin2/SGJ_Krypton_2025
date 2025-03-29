@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnrvihegxivkm"]
+[gd_scene load_steps=4 format=3 uid="uid://cnrvihegxivkm"]
 
 [ext_resource type="Script" uid="uid://ccbypebkat2mh" path="res://Scripts/Gameplay/VictoryZone.gd" id="1_gscpv"]
+[ext_resource type="PackedScene" uid="uid://ca05ray6h02gy" path="res://Scenes/UI/VictoryScreen.tscn" id="2_7oc57"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13e7s"]
 size = Vector2(432, 252)
 
 [node name="VictoryZone" type="Area2D"]
 script = ExtResource("1_gscpv")
+victoryScene = ExtResource("2_7oc57")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_13e7s")
@@ -15,7 +17,4 @@ shape = SubResource("RectangleShape2D_13e7s")
 position = Vector2(-11, 2)
 polygon = PackedVector2Array(-189, -109, -195, 92, 215, 95, 210, -103)
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="child_entered_tree" from="CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]

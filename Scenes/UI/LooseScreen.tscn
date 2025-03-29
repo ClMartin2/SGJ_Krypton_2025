@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu2hkabf5o61d"]
+
+[ext_resource type="PackedScene" uid="uid://b3u5q3gues8mk" path="res://Scenes/UI/ButtonGoBackToStartMenu.tscn" id="1_wup2t"]
+[ext_resource type="FontFile" uid="uid://bwkmo5ka1bq7f" path="res://Fonts/GameBubble.ttf" id="2_jhvew"]
+
+[node name="LooseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonGoBackToStartMenu" parent="." instance=ExtResource("1_wup2t")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.5
+offset_top = 40.0
+offset_right = 408.5
+offset_bottom = 154.0
+theme_override_font_sizes/font_size = 80
+
+[node name="TxtLoose" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -275.0
+offset_top = 200.0
+offset_right = 275.0
+offset_bottom = 306.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_jhvew")
+theme_override_font_sizes/font_size = 100
+text = "You Loose..."
