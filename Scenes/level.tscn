@@ -1,3 +1,85 @@
-[gd_scene format=3 uid="uid://b5sr4wx017wwk"]
+[gd_scene load_steps=9 format=3 uid="uid://cqj5ft3d06tbv"]
+
+[ext_resource type="PackedScene" uid="uid://cj7v7l2hd3awu" path="res://scenes/player.tscn" id="1_2q6dc"]
+[ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://scenes/electron.tscn" id="2_w7c3h"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w7c3h"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7c3h"]
+size = Vector2(1280, 20)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w8frs"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mx8sn"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
+size = Vector2(20, 720)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ppgk2"]
+friction = 0.0
+bounce = 1.0
 
 [node name="Level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_2q6dc")]
+position = Vector2(535, 322)
+
+[node name="Electron" parent="." instance=ExtResource("2_w7c3h")]
+position = Vector2(286, 165)
+
+[node name="Electron2" parent="." instance=ExtResource("2_w7c3h")]
+position = Vector2(1174, 120)
+
+[node name="Electron3" parent="." instance=ExtResource("2_w7c3h")]
+position = Vector2(329, 521)
+
+[node name="Electron4" parent="." instance=ExtResource("2_w7c3h")]
+position = Vector2(900, 356)
+
+[node name="Electron5" parent="." instance=ExtResource("2_w7c3h")]
+position = Vector2(231, 382)
+
+[node name="Electron6" parent="." instance=ExtResource("2_w7c3h")]
+position = Vector2(1022, 461)
+
+[node name="Electron7" parent="." instance=ExtResource("2_w7c3h")]
+position = Vector2(780, 245)
+
+[node name="Electron8" parent="." instance=ExtResource("2_w7c3h")]
+position = Vector2(675, 506)
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+physics_material_override = SubResource("PhysicsMaterial_w7c3h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(640, -10)
+shape = SubResource("RectangleShape2D_w7c3h")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+physics_material_override = SubResource("PhysicsMaterial_w8frs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2"]
+position = Vector2(640, 730)
+shape = SubResource("RectangleShape2D_w7c3h")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+physics_material_override = SubResource("PhysicsMaterial_mx8sn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
+position = Vector2(-10, 360)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
+physics_material_override = SubResource("PhysicsMaterial_ppgk2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
+position = Vector2(1290, 360)
+shape = SubResource("RectangleShape2D_w8frs")
