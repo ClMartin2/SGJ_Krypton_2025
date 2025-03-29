@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 		
 		if distance < 500.0 and distance > 0.1:
 			var strength = 5000.0 / pow(distance, 2)
-			repulsion_force += diff.normalized() * strength * 500
+			repulsion_force += diff.normalized() * strength * 1000
 			#print("rep force" + str(repulsion_force))
 			
 	vel += repulsion_force * delta
