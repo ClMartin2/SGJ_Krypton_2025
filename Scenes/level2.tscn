@@ -1,8 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://burv22aetito"]
+[gd_scene load_steps=9 format=3 uid="uid://dheet7k2i2bg2"]
 
 [ext_resource type="Texture2D" uid="uid://b6nyf1lrkw6tq" path="res://graphics/Image_Level2.png" id="1_2k3dv"]
-[ext_resource type="PackedScene" uid="uid://cbb07bk3jc8kn" path="res://Scenes/Player.tscn" id="1_4038r"]
-[ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="2_2k3dv"]
+[ext_resource type="PackedScene" uid="uid://cj7v7l2hd3awu" path="res://scenes/player.tscn" id="1_4038r"]
+[ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://scenes/electron.tscn" id="2_2k3dv"]
+[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_2k3dv"]
+
+[sub_resource type="GDScript" id="GDScript_4038r"]
+script/source = "extends Node2D
+
+
+var temperature : int = -100
+"
 
 [sub_resource type="Curve" id="Curve_4038r"]
 _data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
@@ -18,7 +26,8 @@ scale_min = 5.0
 scale_max = 5.0
 alpha_curve = SubResource("CurveTexture_dwgg1")
 
-[node name="Level" type="Node2D"]
+[node name="Level2" type="Node2D"]
+script = SubResource("GDScript_4038r")
 
 [node name="BG" type="Sprite2D" parent="."]
 z_index = -1
@@ -249,3 +258,5 @@ metadata/_edit_lock_ = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D6"]
 polygon = PackedVector2Array(-677, -328, -653, -572, -783, -1134, -303, -1183, -246, -344, 2213, -426, 2278, -1915, 2628, -1997, 2685, -1753, 2783, -971, 2791, -621, 2734, 22, 2669, 71, 2017, 120, 1350, 201, -685, 242, -1328, 282, -2061, 266, -2167, 225, -2207, 160, -2134, -247, -2093, -279, -2061, -214, -1898, -263)
 metadata/_edit_lock_ = true
+
+[node name="UI" parent="." instance=ExtResource("4_2k3dv")]

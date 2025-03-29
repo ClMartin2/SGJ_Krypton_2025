@@ -33,7 +33,8 @@ func _process(delta: float) -> void:
 	vel += repulsion_force * delta
 	
 	# 🧱 Limiter la vitesse max ici
-	var max_speed = 300.0
+	var max_speed = 1200 + (Global.temperature * 5)
+	#var max_speed = 300
 	if vel.length() > max_speed:
 		vel = vel.normalized() * max_speed
 
