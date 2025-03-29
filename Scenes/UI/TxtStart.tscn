@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d0bwwe0of0673"]
+[gd_scene load_steps=0 format=3 uid="uid://d0bwwe0of0673"]
 
 [node name="TxtStart" type="Control"]
 layout_mode = 3

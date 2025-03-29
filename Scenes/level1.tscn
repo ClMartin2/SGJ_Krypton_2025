@@ -277,3 +277,4 @@ polygon = PackedVector2Array(-36, -1, -42, 57, -9, 88, 73, 103, 134, 97, 186, 80
 position = Vector2(1397, 82)
 
 [node name="halo" parent="." instance=ExtResource("7_ejswk")]
+position = Vector2(-3199, -2255)
