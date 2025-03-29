@@ -8,7 +8,7 @@ friction = 0.0
 bounce = 1.01
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rgomx"]
-radius = 7.07107
+radius = 13.0
 
 [node name="Electron" type="RigidBody2D"]
 collision_layer = 4
@@ -17,7 +17,7 @@ physics_material_override = SubResource("PhysicsMaterial_twysd")
 script = ExtResource("1_twysd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_rgomx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
