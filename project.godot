@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="electrons"
-run/main_scene="uid://cqj5ft3d06tbv"
+run/main_scene="uid://bmd34xmqjnm7h"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://global/global.gd"
+SceneSwitcher="*res://Scenes/Global/SceneSwitcher.gd"
+
 
 [display]
 

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://fie547cr5kdm"]
+
+[ext_resource type="PackedScene" uid="uid://b3u5q3gues8mk" path="res://Scenes/UI/ButtonGoBackToStartMenu.tscn" id="1_xw0g3"]
+[ext_resource type="PackedScene" uid="uid://cj7v7l2hd3awu" path="res://Scenes/Player.tscn" id="2_uojc1"]
+[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="3_3k5qk"]
+[ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="4_3k5qk"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Level 1"
+
+[node name="ButtonGoBackToStartMenu" parent="." instance=ExtResource("1_xw0g3")]
+offset_left = 1035.0
+offset_top = 63.0
+offset_right = 1035.0
+offset_bottom = 63.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Player" parent="." instance=ExtResource("2_uojc1")]
+position = Vector2(193, 248)
+
+[node name="VictoryZone" parent="." instance=ExtResource("3_3k5qk")]
+position = Vector2(532, 208)
+
+[node name="Electron" parent="." instance=ExtResource("4_3k5qk")]
+position = Vector2(282, 149)
