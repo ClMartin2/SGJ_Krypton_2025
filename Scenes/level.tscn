@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cqj5ft3d06tbv"]
 
-[ext_resource type="PackedScene" uid="uid://cj7v7l2hd3awu" path="res://scenes/player.tscn" id="1_2q6dc"]
+[ext_resource type="PackedScene" uid="uid://cbb07bk3jc8kn" path="res://scenes/player.tscn" id="1_2q6dc"]
 [ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://scenes/electron.tscn" id="2_w7c3h"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w7c3h"]
@@ -25,7 +25,7 @@ size = Vector2(20, 720)
 friction = 0.0
 bounce = 1.0
 
-[node name="Level2" type="Node2D"]
+[node name="Level3" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_2q6dc")]
 position = Vector2(535, 322)

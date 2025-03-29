@@ -21,7 +21,6 @@ Global="*res://global/global.gd"
 SceneSwitcher="*res://Scenes/Global/SceneSwitcher.gd"
 GameManager="*res://Scenes/Global/GameManager.gd"
 
-
 [display]
 
 window/size/viewport_width=1280

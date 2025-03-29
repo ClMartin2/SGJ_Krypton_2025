@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dheet7k2i2bg2"]
 
 [ext_resource type="Texture2D" uid="uid://b6nyf1lrkw6tq" path="res://graphics/Image_Level2.png" id="1_2k3dv"]
-[ext_resource type="PackedScene" uid="uid://cj7v7l2hd3awu" path="res://scenes/player.tscn" id="1_4038r"]
+[ext_resource type="PackedScene" uid="uid://cbb07bk3jc8kn" path="res://scenes/player.tscn" id="1_4038r"]
 [ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://scenes/electron.tscn" id="2_2k3dv"]
 [ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_2k3dv"]
 
@@ -80,7 +80,7 @@ position = Vector2(1640, -1762)
 position = Vector2(544, -1730)
 
 [node name="Electron12" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(3825, -1475)
+position = Vector2(3834, -1394)
 
 [node name="Electron13" parent="Electrons" instance=ExtResource("2_2k3dv")]
 position = Vector2(-139, -1674)
@@ -176,19 +176,19 @@ position = Vector2(4661, -1444)
 position = Vector2(2107, 578)
 
 [node name="Electron37" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(3125, -1443)
+position = Vector2(2889, -1508)
 
 [node name="Electron38" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(5205, -1429)
+position = Vector2(3984, -1966)
 
 [node name="Electron39" parent="Electrons" instance=ExtResource("2_2k3dv")]
 position = Vector2(2117, -86)
 
 [node name="Electron40" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(3832, -1329)
+position = Vector2(3644, -917)
 
 [node name="Electron17" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(3405, -1422)
+position = Vector2(3521, -1279)
 
 [node name="Electron18" parent="Electrons" instance=ExtResource("2_2k3dv")]
 position = Vector2(810, -1752)
