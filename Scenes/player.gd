@@ -2,13 +2,22 @@ extends CharacterBody2D
 class_name Player
 
 var vel = Vector2(0.5,0.5)
+var pause = false;
 
 func _ready() -> void:
 	add_to_group("electrons")
 
 #@onready var all_electrons = get_tree().get_nodes_in_group("electrons")
 
+func Pause():
+	pause = true
+	remove_from_group("electrons")
+	velocity = Vector2.ZERO
+
 func _process(delta: float) -> void:
+	if(pause):
+		return
+		
 	var all_electrons = get_tree().get_nodes_in_group("electrons")
 	var acceleration = Input.get_vector("left","right", "up", "down")
 	vel += acceleration * 2

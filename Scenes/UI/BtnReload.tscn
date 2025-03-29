@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://8xg5rwivpcb8"]
+
+[ext_resource type="FontFile" uid="uid://bwkmo5ka1bq7f" path="res://Fonts/GameBubble.ttf" id="1_kwjw5"]
+[ext_resource type="Script" uid="uid://dwilaryugg4nx" path="res://Scripts/UI/BtnReload.gd" id="2_y5y0t"]
+
+[node name="ButtonGoBackToStartMenu" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_kwjw5")
+theme_override_font_sizes/font_size = 100
+text = "Retry"
+script = ExtResource("2_y5y0t")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

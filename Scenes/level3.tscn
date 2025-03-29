@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdhlogru0pbun"]
+[gd_scene load_steps=7 format=3 uid="uid://cdhlogru0pbun"]
 
 [ext_resource type="Texture2D" uid="uid://b6nyf1lrkw6tq" path="res://graphics/Image_Level2.png" id="1_nm84x"]
-[ext_resource type="PackedScene" uid="uid://cbb07bk3jc8kn" path="res://Scenes/Player.tscn" id="2_d77hw"]
+[ext_resource type="PackedScene" uid="uid://cbb07bk3jc8kn" path="res://Scenes/player.tscn" id="2_d77hw"]
 [ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="3_jaajx"]
 [ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://Scenes/SpawnerElectrons.tscn" id="4_d77hw"]
 [ext_resource type="PackedScene" uid="uid://djqncxc7s00ts" path="res://Scenes/Impurity.tscn" id="5_jaajx"]
+[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="6_mrxql"]
 
 [node name="Level" type="Node2D"]
 
@@ -238,5 +239,8 @@ numberToSpawn = 20
 position = Vector2(1566, -1766)
 numberToSpawn = 20
 
+[node name="VictoryZone" parent="." instance=ExtResource("6_mrxql")]
+position = Vector2(-362, -2011)
+
 [node name="Impurity" parent="." instance=ExtResource("5_jaajx")]
-position = Vector2(-305, -1695)
+position = Vector2(-303, -1684)

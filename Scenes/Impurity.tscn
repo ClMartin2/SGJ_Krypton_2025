@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://djqncxc7s00ts"]
+[gd_scene load_steps=4 format=3 uid="uid://djqncxc7s00ts"]
 
 [ext_resource type="Script" uid="uid://dp6qxajtcupok" path="res://Scripts/Gameplay/Impurity.gd" id="1_pyf0a"]
+[ext_resource type="PackedScene" uid="uid://cu2hkabf5o61d" path="res://Scenes/UI/LooseScreen.tscn" id="2_gmxls"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gmxls"]
 radius = 39.0128
 
 [node name="Impurity" type="Area2D"]
 script = ExtResource("1_pyf0a")
+looseScreen = ExtResource("2_gmxls")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gmxls")
