@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqsmlcdacnbjk"]
+
+[ext_resource type="Texture2D" uid="uid://c033uw40tdb61" path="res://graphics/RondBlanc.png" id="1_ckepj"]
+
+[node name="halo" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.835294, 1, 0.619608)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_ckepj")

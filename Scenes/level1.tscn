@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmd34xmqjnm7h"]
+[gd_scene load_steps=13 format=3 uid="uid://bmd34xmqjnm7h"]
 
 [ext_resource type="PackedScene" uid="uid://8xk0qr6cdihm" path="res://scenes/temp_min.tscn" id="1_ru4tf"]
 [ext_resource type="PackedScene" uid="uid://cbb07bk3jc8kn" path="res://scenes/player.tscn" id="1_wwpf4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://72u3vilyn2cy" path="res://icon.svg" id="3_m7ahb"]
 [ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_dwgg1"]
 [ext_resource type="PackedScene" uid="uid://dy4o6rtp4hrv3" path="res://scenes/temp_max.tscn" id="6_6sh32"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="7_ejswk"]
 
 [sub_resource type="Curve" id="Curve_m7ahb"]
 _data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
@@ -274,3 +275,5 @@ polygon = PackedVector2Array(-36, -1, -42, 57, -9, 88, 73, 103, 134, 97, 186, 80
 
 [node name="temp_max" parent="." instance=ExtResource("6_6sh32")]
 position = Vector2(1397, 82)
+
+[node name="halo" parent="." instance=ExtResource("7_ejswk")]

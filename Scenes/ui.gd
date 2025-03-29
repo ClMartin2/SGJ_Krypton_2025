@@ -8,4 +8,7 @@ extends CanvasLayer
 #
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	$MarginContainer/Label.text = "Temperature = " + str(Global.temperature) + "°c"
+	if Global.superconduct:
+		$MarginContainer/Label.text = "Temperature = " + str(Global.temperature) + "°c " + "SUPER"
+	else :
+		$MarginContainer/Label.text = "Temperature = " + str(Global.temperature) + "°c "
