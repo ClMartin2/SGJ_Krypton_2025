@@ -31,6 +31,7 @@ size = Vector2(200, 5000)
 
 [node name="temp_min" parent="." instance=ExtResource("1_ru4tf")]
 position = Vector2(1055, 323)
+scale = Vector2(3, 3)
 
 [node name="Player" parent="." instance=ExtResource("1_wwpf4")]
 position = Vector2(535, 322)
