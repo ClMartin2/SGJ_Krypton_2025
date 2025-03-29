@@ -8,7 +8,7 @@
 _data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_dwgg1"]
+[sub_resource type="CurveTexture" id="CurveTexture_m7ahb"]
 curve = SubResource("Curve_m7ahb")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m7ahb"]
@@ -16,7 +16,7 @@ particle_flag_disable_z = true
 gravity = Vector3(0, 0, 0)
 scale_min = 5.0
 scale_max = 5.0
-alpha_curve = SubResource("CurveTexture_dwgg1")
+alpha_curve = SubResource("CurveTexture_m7ahb")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwgg1"]
 size = Vector2(5000, 200)
@@ -162,6 +162,8 @@ position = Vector2(1363, 249)
 [node name="Borders" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+light_mask = 0
+visibility_layer = 0
 position = Vector2(-2062, 107)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
