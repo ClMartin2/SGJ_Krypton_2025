@@ -124,3 +124,8 @@ func _process(delta: float) -> void:
 	if collision:
 		var normal = collision.get_normal()
 		vel = vel.bounce(normal)
+
+
+func _on_timer_timeout() -> void:
+	if (Global.temperature < Global.minSuperTemp + 10):
+		Global.temperature += 1
