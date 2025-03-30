@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DataLevel" load_steps=2 format=3 uid="uid://do5m4kakb1f3t"]
+[gd_resource type="Resource" script_class="DataLevel" load_steps=3 format=3 uid="uid://do5m4kakb1f3t"]
 
 [ext_resource type="Script" uid="uid://c5po5byxxp4s0" path="res://Scripts/Ressources/R_DataLevele.gd" id="1_olg1s"]
+[ext_resource type="Texture2D" uid="uid://b0c51i8sgmd3o" path="res://graphics/StartBanner/bandeau_4.png" id="2_03eq6"]
 
 [resource]
 script = ExtResource("1_olg1s")
 txtStartLevel = "Un petit truc en plus"
 txtEndLevel = "Tous les chemins semblaient ouverts… jusqu’à ce qu’ils ne le soient plus. Impossible de passer, quoi que vous fassiez. Ce niveau n’était pas là pour être gagné. Vous venez de rencontrer un ennemi redoutable : les impuretés. Elles diffusent, arrêtent ou même expulsent les électrons du système. Parfois, ce n’est pas de votre faute — c’est le matériau lui-même."
+startBanner = ExtResource("2_03eq6")
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"

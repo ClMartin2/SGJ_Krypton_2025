@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://ca05ray6h02gy"]
+[gd_scene load_steps=6 format=3 uid="uid://ca05ray6h02gy"]
 
 [ext_resource type="Script" uid="uid://bqhyucna5fotl" path="res://Scripts/UI/VictoryScreen.gd" id="1_1i451"]
 [ext_resource type="PackedScene" uid="uid://b3u5q3gues8mk" path="res://Scenes/UI/ButtonGoBackToStartMenu.tscn" id="2_1i451"]
+[ext_resource type="Texture2D" uid="uid://diocbbnyv5psd" path="res://graphics/ExplicationBanner/bandeau_explicatif2.png" id="3_l8a8p"]
+[ext_resource type="FontFile" uid="uid://bwkmo5ka1bq7f" path="res://Fonts/GameBubble.ttf" id="4_20fe1"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quve0"]
-bg_color = Color(0, 0, 0, 0.0470588)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20fe1"]
+texture = ExtResource("3_l8a8p")
 
 [node name="VictoryScreen" type="Control"]
 layout_mode = 3
@@ -15,6 +17,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1i451")
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_20fe1")
+
 [node name="ButtonGoBackToStartMenu" parent="." instance=ExtResource("2_1i451")]
 layout_mode = 1
 anchors_preset = -1
@@ -24,23 +35,20 @@ anchor_right = 0.725
 anchor_bottom = 0.939
 theme_override_font_sizes/font_size = 50
 
-[node name="Panel" type="Panel" parent="."]
+[node name="TxtExplication" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.081
-anchor_top = 0.057
-anchor_right = 0.939
-anchor_bottom = 0.723
-theme_override_styles/panel = SubResource("StyleBoxFlat_quve0")
-
-[node name="TxtExplication" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.036
+anchor_top = 0.276
+anchor_right = 0.972
+anchor_bottom = 0.8
+offset_left = -0.0800018
+offset_top = 0.279984
+offset_right = -0.160034
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
-text = "Les électron c'est super, et la paire de cooper encore mieux zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-vertical_alignment = 1
+theme_override_fonts/font = ExtResource("4_20fe1")
+theme_override_font_sizes/font_size = 35
+text = "Vous l’avez senti, n’est-ce pas ? Une sorte de poussée invisible, un léger rebond à chaque fois que vous approchiez un autre électron. Ce n’était pas de la maladresse : c’était de la répulsion. Dans ce labyrinthe tranquille de cuivre, vous venez de découvrir le tout premier secret de la conduction :
+    les électrons ne s’aiment pas trop, c'est ce qu'on appelle la répulsion de Coulomb."
 autowrap_mode = 3

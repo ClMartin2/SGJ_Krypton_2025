@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DataLevel" load_steps=2 format=3 uid="uid://isec27cv4kb0"]
+[gd_resource type="Resource" script_class="DataLevel" load_steps=3 format=3 uid="uid://isec27cv4kb0"]
 
 [ext_resource type="Script" uid="uid://c5po5byxxp4s0" path="res://Scripts/Ressources/R_DataLevele.gd" id="1_73gvq"]
+[ext_resource type="Texture2D" uid="uid://dnpaki027aw4e" path="res://graphics/StartBanner/bandeau_1.png" id="2_w01xc"]
 
 [resource]
 script = ExtResource("1_73gvq")
 txtStartLevel = "Fuis moi je te suis, suis moi je te fuis..."
 txtEndLevel = "Vous l’avez senti, n’est-ce pas ? Une sorte de poussée invisible, un léger rebond à chaque fois que vous approchiez un autre électron. Ce n’était pas de la maladresse : c’était de la répulsion. Dans ce labyrinthe tranquille de cuivre, vous venez de découvrir le tout premier secret de la conduction :    les électrons ne s’aiment pas trop, c'est ce qu'on appelle la répulsion de Coulomb."
+startBanner = ExtResource("2_w01xc")
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"
