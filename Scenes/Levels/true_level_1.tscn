@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://pe20iw8jrcyw"]
 
 [ext_resource type="Texture2D" uid="uid://bgf8avr0sn1in" path="res://graphics/Niveau_1.png" id="1_w6pi2"]
-[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="2_1fj1e"]
-[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/player.tscn" id="3_wlo63"]
-[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://Scenes/ui.tscn" id="4_vnh7n"]
-[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="5_1fj1e"]
-[ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://Scenes/SpawnerElectrons.tscn" id="6_wlo63"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="2_1fj1e"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="3_wlo63"]
+[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_vnh7n"]
+[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://scenes/VictoryZone.tscn" id="5_1fj1e"]
+[ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://scenes/SpawnerElectrons.tscn" id="6_wlo63"]
 
 [node name="level1" type="Node2D"]
 

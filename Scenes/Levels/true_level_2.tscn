@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjrxwfyoy0pyr"]
+[gd_scene load_steps=7 format=3 uid="uid://bjrxwfyoy0pyr"]
 
 [ext_resource type="Texture2D" uid="uid://b375p8ic2fnox" path="res://graphics/Niveau_2.png" id="1_fhsda"]
-[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/player.tscn" id="2_fkfp0"]
-[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="3_xxcll"]
-[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://Scenes/ui.tscn" id="4_fkfp0"]
-[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="5_7joa5"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="2_fkfp0"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="3_xxcll"]
+[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_fkfp0"]
+[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://scenes/VictoryZone.tscn" id="5_7joa5"]
+[ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://scenes/SpawnerElectrons.tscn" id="6_d17r2"]
 
 [node name="level2" type="Node2D"]
 
@@ -37,3 +38,32 @@ position = Vector2(-3543, -136)
 position = Vector2(1730, 1331)
 rotation = 1.5708
 scale = Vector2(0.8, 0.8)
+
+[node name="SpawnerElectrons2" type="Node" parent="."]
+
+[node name="SpawnerElectrons" parent="SpawnerElectrons2" instance=ExtResource("6_d17r2")]
+position = Vector2(-1568, 503)
+radius = 150
+numberToSpawn = 15
+
+[node name="SpawnerElectrons2" parent="SpawnerElectrons2" instance=ExtResource("6_d17r2")]
+position = Vector2(124, 1306)
+radius = 150
+numberToSpawn = 10
+
+[node name="SpawnerElectrons3" parent="SpawnerElectrons2" instance=ExtResource("6_d17r2")]
+position = Vector2(526, -368)
+radius = 150
+numberToSpawn = 10
+
+[node name="SpawnerElectrons3" type="Node" parent="."]
+
+[node name="SpawnerElectrons2" parent="SpawnerElectrons3" instance=ExtResource("6_d17r2")]
+position = Vector2(1977, -1213)
+radius = 150
+numberToSpawn = 10
+
+[node name="SpawnerElectrons3" parent="SpawnerElectrons3" instance=ExtResource("6_d17r2")]
+position = Vector2(-208, -1163)
+radius = 150
+numberToSpawn = 10
