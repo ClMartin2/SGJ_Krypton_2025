@@ -63,10 +63,10 @@ func _process(delta: float) -> void:
 		Global.superconduct = false
 	
 	if Global.superconduct:
-		vel += acceleration * 20
+		vel += acceleration * 1500 * delta
 		rotation += 10 * delta
 	else:
-		vel += acceleration * 2
+		vel += acceleration * 750 * delta
 		rotation = 0
 	
 	# RECHERCHE DE CLOSEST POUR HALO
