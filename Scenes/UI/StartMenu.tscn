@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgxaiakgfw1gp"]
+[gd_scene load_steps=10 format=3 uid="uid://cgxaiakgfw1gp"]
 
 [ext_resource type="StyleBox" uid="uid://cnan33sqmeiys" path="res://UI/StyleBoxes/StyleBoxBGStartMenu.tres" id="1_omsb3"]
 [ext_resource type="PackedScene" uid="uid://ckxqsxhtmyqvm" path="res://Scenes/UI/ButtonLevel.tscn" id="1_q0ago"]
 [ext_resource type="FontFile" uid="uid://bwkmo5ka1bq7f" path="res://Fonts/GameBubble.ttf" id="2_iky6m"]
-[ext_resource type="PackedScene" uid="uid://bmd34xmqjnm7h" path="res://Scenes/level1.tscn" id="4_k44vq"]
-[ext_resource type="PackedScene" uid="uid://dheet7k2i2bg2" path="res://Scenes/level2.tscn" id="5_kit3o"]
-[ext_resource type="PackedScene" uid="uid://cdhlogru0pbun" path="res://Scenes/level3.tscn" id="6_f3otk"]
+[ext_resource type="PackedScene" uid="uid://bmd34xmqjnm7h" path="res://Scenes/Levels/level1.tscn" id="4_k44vq"]
+[ext_resource type="PackedScene" uid="uid://dheet7k2i2bg2" path="res://Scenes/Levels/level2.tscn" id="5_kit3o"]
+[ext_resource type="PackedScene" uid="uid://cdhlogru0pbun" path="res://Scenes/Levels/level3.tscn" id="6_f3otk"]
+[ext_resource type="PackedScene" uid="uid://jioyl1u13yjm" path="res://Scenes/Levels/level4.tscn" id="7_u4h61"]
+[ext_resource type="PackedScene" uid="uid://dt0wrci4825mg" path="res://Scenes/Levels/level5.tscn" id="8_ij777"]
+[ext_resource type="PackedScene" uid="uid://dhbecqpo2xifo" path="res://Scenes/Levels/level6.tscn" id="9_ij777"]
 
 [node name="StartMenu" type="CanvasLayer"]
 
@@ -69,9 +72,14 @@ levelToLoad = ExtResource("6_f3otk")
 [node name="Level4" parent="Control/GridContainer" instance=ExtResource("1_q0ago")]
 layout_mode = 2
 text = "Level 4"
-levelToLoad = ExtResource("4_k44vq")
+levelToLoad = ExtResource("7_u4h61")
 
 [node name="Level5" parent="Control/GridContainer" instance=ExtResource("1_q0ago")]
 layout_mode = 2
 text = "Level 5"
-levelToLoad = ExtResource("4_k44vq")
+levelToLoad = ExtResource("8_ij777")
+
+[node name="Level6" parent="Control/GridContainer" instance=ExtResource("1_q0ago")]
+layout_mode = 2
+text = "Level 5"
+levelToLoad = ExtResource("9_ij777")

@@ -1,0 +1,250 @@
+[gd_scene load_steps=8 format=3 uid="uid://jioyl1u13yjm"]
+
+[ext_resource type="Texture2D" uid="uid://b6nyf1lrkw6tq" path="res://graphics/Image_Level2.png" id="1_ohik4"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/player.tscn" id="2_adi6q"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="3_7u67b"]
+[ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="4_21ycj"]
+[ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://Scenes/SpawnerElectrons.tscn" id="5_egqhl"]
+[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="6_e7bnd"]
+[ext_resource type="PackedScene" uid="uid://djqncxc7s00ts" path="res://Scenes/Impurity/Impurity1.tscn" id="7_a6t2m"]
+
+[node name="Level4" type="Node2D"]
+
+[node name="BG" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2596, -159)
+scale = Vector2(3.43178, 3.58476)
+texture = ExtResource("1_ohik4")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_adi6q")]
+position = Vector2(-311, -1835)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.6, 0.6)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="halo" parent="." instance=ExtResource("3_7u67b")]
+position = Vector2(-2773, -1401)
+
+[node name="Electrons" type="Node" parent="."]
+
+[node name="Electron" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(180, -1735)
+
+[node name="Electron3" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1177, 202)
+
+[node name="Electron4" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1946, -1752)
+
+[node name="Electron5" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2758, -1256)
+
+[node name="Electron6" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1145, 981)
+
+[node name="Electron7" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1103, -1716)
+
+[node name="Electron8" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1421, -1752)
+
+[node name="Electron10" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1640, -1762)
+
+[node name="Electron11" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(544, -1730)
+
+[node name="Electron12" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3825, -1475)
+
+[node name="Electron15" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2403, -787)
+
+[node name="Electron16" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(4257, -1393)
+
+[node name="Electron21" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1911, -1076)
+
+[node name="Electron22" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2919, -273)
+
+[node name="Electron23" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1199, -950)
+
+[node name="Electron24" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1183, -180)
+
+[node name="Electron25" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2906, -669)
+
+[node name="Electron26" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2462, -58)
+
+[node name="Electron27" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2027, 84)
+
+[node name="Electron28" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3735, 74)
+
+[node name="Electron29" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3805, 421)
+
+[node name="Electron30" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3297, 963)
+
+[node name="Electron31" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3541, 729)
+
+[node name="Electron32" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3486, 1283)
+
+[node name="Electron41" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(6257, -124)
+
+[node name="Electron42" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(5682, -63)
+
+[node name="Electron43" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(5474, 164)
+
+[node name="Electron44" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(5449, 616)
+
+[node name="Electron45" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(5474, 1460)
+
+[node name="Electron46" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(5480, 928)
+
+[node name="Electron47" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(4856, 1491)
+
+[node name="Electron48" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(4085, 1546)
+
+[node name="Electron49" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(4361, 1515)
+
+[node name="Electron50" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3663, 1485)
+
+[node name="Electron51" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3406, 1491)
+
+[node name="Electron33" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2768, 719)
+
+[node name="Electron34" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1900, 218)
+
+[node name="Electron35" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(4661, -1444)
+
+[node name="Electron36" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2107, 578)
+
+[node name="Electron37" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3125, -1443)
+
+[node name="Electron38" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(5205, -1429)
+
+[node name="Electron39" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2117, -86)
+
+[node name="Electron40" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3832, -1329)
+
+[node name="Electron17" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(3405, -1422)
+
+[node name="Electron18" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(810, -1752)
+
+[node name="Electron19" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2669, -1768)
+
+[node name="Electron20" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(1147, 558)
+
+[node name="Electron9" parent="Electrons" instance=ExtResource("4_21ycj")]
+position = Vector2(2352, 834)
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Borders"]
+position = Vector2(-1032, 301)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D9"]
+polygon = PackedVector2Array(-36, -1, -42, 57, -9, 88, 73, 103, 134, 97, 186, 80, 228, 58, 237, 18, 233, -16, 225, -48, 209, -73, 185, -90, 113, -116, 70, -121, 26, -119, -1, -90, -11, -66, 14, -60, 43, -69, 70, -83, 119, -73, 146, -62, 167, -36, 174, -16, 176, 3, 170, 17, 156, 33, 129, 51, 102, 58, 74, 58, 37, 52, 6, 43, -10, 38, -14, 26)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+position = Vector2(-162, -2569)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D"]
+polygon = PackedVector2Array(1, -3, -10, -140, -653, -72, -1078, 5437, -691, 5344, -751, 4531, -734, 3686, -701, 3597, -228, 3492, -156, 3403, -183, 2377, -152, 2072, 915, 2032, 952, 2234, 983, 2531, 1000, 3607, 1026, 3644, 1097, 3684, 1132, 3689, 1160, 3678, 1183, 3649, 1220, 3618, 1232, 3404, 1234, 3150, 1217, 2571, 1203, 1897, 1200, 1592, 1206, 1341, 1220, 1310, 1220, 1281, 1614, 1273, 2650, 1216, 2715, 1196, 2744, 1170, 2744, 993, 2718, 953, 2681, 925, 2547, 910, 2068, 919, 1916, 913, 1785, 922, 1097, 936, 139, 985, -84, 993, -329, 990, -477, 1002, -463, 365, -449, 251, -449, 83, -50, 14)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+position = Vector2(-162, -2569)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D2"]
+polygon = PackedVector2Array(0, -3, -11, -139, 5480, -530, 5494, -248, 5540, -82, 5546, 52, 5517, 206, 5486, 263, 5431, 306, 5360, 323, 4051, 394, 3805, 400, 3540, 417, 3543, 494, 3546, 854, 3521, 1731, 3592, 2424, 3610, 2681, 3633, 2730, 3646, 2961, 3662, 3016, 3649, 3055, 3620, 3073, 3576, 3068, 3449, 3083, 3164, 3148, 2588, 3184, 2533, 3169, 2461, 3174, 2417, 3161, 2383, 3112, 2370, 2806, 2354, 2772, 2380, 2738, 2398, 2743, 2422, 2715, 2946, 2702, 3283, 2684, 3239, 1981, 3228, 632, 2300, 671, 204, 705, 124, 697, 80, 663, 72, 572, 25, 129, 17, 43)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+position = Vector2(5760, -3223)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D3"]
+polygon = PackedVector2Array(-446, 129, -406, -60, 1010, -36, 1097, 6136, -6662, 6222, -6623, 5995, -6253, 6004, -6283, 5107, -6309, 4771, -6305, 4671, -6271, 4614, -6114, 4577, -5722, 4548, -5480, 4558, -5157, 4555, -4721, 4526, -4513, 4533, -4432, 4511, -4422, 3958, -4444, 3924, -4357, 2584, -4335, 2468, -4284, 2439, -3927, 2358, -3610, 2351, -3384, 2301, -3060, 2286, -3038, 2314, -3038, 2822, -3026, 2850, -3026, 2879, -3073, 2920, -3158, 2901, -3462, 2957, -3572, 2963, -3939, 2979, -3901, 4128, -3484, 4150, -3412, 4184, -3390, 4235, -3449, 4724, -3456, 4755, -3519, 4777, -3716, 4734, -4539, 4809, -4934, 4815, -4903, 5863, -3393, 5775, 822, 5725, 734, 4959, 668, 4137, 665, 3484, 690, 3039, 681, 2948, -421, 2992, -468, 4071, -449, 4542, -474, 4586, -502, 4627, -2018, 4589, -2037, 4523, -1987, 4501, -2031, 4448, -2072, 4125, -2100, 4056, -2069, 4021, -2069, 3958, -2006, 3949, -1987, 3999, -1811, 4012, -1827, 3371, -1868, 3095, -1858, 2998, -1805, 2970, -1695, 2976, -1111, 2935, -936, 2882, -920, 2245, -923, 1953, -942, 1928, -948, 1702, -1981, 1705, -2025, 1739, -2109, 1664, -2062, 1586, -2053, 1451, -1990, 1413, -1726, 1379, 131, 1344, 182, 136)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
+position = Vector2(4223, -839)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D4"]
+polygon = PackedVector2Array(-425, -408, 347, -426, 407, -413, 434, -357, 448, 116, 430, 254, 407, 304, 232, 378, 80, 396, -71, 373, -278, 313, -283, 350, -347, 355, -361, 263, -398, 166, -471, -334)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Borders"]
+position = Vector2(288, 639)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D5"]
+polygon = PackedVector2Array(-356, -774, -310, -848, -182, -898, 135, -926, 209, -880, 232, -687, 269, -475, 301, 347, 305, 398, 255, 434, 108, 421, -62, 439, -283, 425, -343, -278)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Borders"]
+position = Vector2(3395, 2016)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D6"]
+polygon = PackedVector2Array(-677, -328, -653, -572, -783, -1134, -303, -1183, -246, -344, 2213, -426, 2278, -1915, 2628, -1997, 2685, -1753, 2783, -971, 2791, -621, 2734, 22, 2669, 71, 2017, 120, 1350, 201, -685, 242, -1328, 282, -2061, 266, -2167, 225, -2207, 160, -2134, -247, -2093, -279, -2061, -214, -1898, -263)
+metadata/_edit_lock_ = true
+
+[node name="SpawnerElectrons" parent="." instance=ExtResource("5_egqhl")]
+position = Vector2(65, -1720)
+numberToSpawn = 0
+
+[node name="SpawnerElectrons2" parent="." instance=ExtResource("5_egqhl")]
+position = Vector2(1036, -1766)
+numberToSpawn = 20
+
+[node name="SpawnerElectrons3" parent="." instance=ExtResource("5_egqhl")]
+position = Vector2(1566, -1766)
+numberToSpawn = 20
+
+[node name="VictoryZone" parent="." instance=ExtResource("6_e7bnd")]
+position = Vector2(-362, -2011)
+
+[node name="Impurity" parent="." instance=ExtResource("7_a6t2m")]
+position = Vector2(-303, -1684)
