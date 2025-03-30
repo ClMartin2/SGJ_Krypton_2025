@@ -54,6 +54,15 @@ func _process(delta: float) -> void:
 	if vel.length() < min_speed:
 		vel = vel.normalized() * min_speed
 		
+	if Global.superconduct:
+		$Sprite2D_normal.visible = false
+		$Sprite2D2_super.visible = true
+		rotation += 10 * delta
+	else: 
+		$Sprite2D_normal.visible = true
+		$Sprite2D2_super.visible = false
+		rotation = 0
+		
 	var collision = move_and_collide(vel * delta)
 	
 	if collision:

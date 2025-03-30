@@ -49,27 +49,30 @@ func _process(delta: float) -> void:
 	var target = get_closest_electron()
 	
 	if (target and Global.temperature <= Global.minSuperTemp):
-		print("CAN SUPER")
+		#print("CAN SUPER")
 		Global.canSuper = true
 	else:
-		print("NO SUPER")
+		#print("NO SUPER")
 		Global.canSuper = false
 		
 	
-	if (Input.is_action_just_pressed("launch_super") and Global.canSuper) :
+	if (Input.is_action_just_pressed("launch_super") and Global.canSuper and !Global.superconduct) :
 		Global.superconduct = !Global.superconduct
-		print("pressed - SUPER")
+		#print("pressed - SUPER")
+	
+	if (Global.superconduct and Global.temperature > Global.minSuperTemp):
+		Global.superconduct = false
 	
 	if Global.superconduct:
 		vel += acceleration * 20
-		rotation += 5 * delta
+		rotation += 10 * delta
 	else:
 		vel += acceleration * 2
 		rotation = 0
 	
 	# RECHERCHE DE CLOSEST POUR HALO
 	
-	if target:
+	if (target and Global.canSuper and !Global.superconduct):
 		$"../halo".global_position = target.global_position
 		$"../halo".visible = true
 		#halo.global_position = target.global_position
