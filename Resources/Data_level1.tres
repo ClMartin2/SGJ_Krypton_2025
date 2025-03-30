@@ -6,5 +6,4 @@
 script = ExtResource("1_73gvq")
 txtEndLevel = "Cool le lyon"
 txtStartLevel = "Le feu au coeur"
-levelAssociate = "level1"
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"
