@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 	var pourcentageValue = 1 - ((Global.temperature - maxTemperature) / (minTemperature - maxTemperature))
 
 	# Assurer que la valeur reste entre 0 et 1
-	pourcentageValue = clamp(pourcentageValue, 0.0, 1.0)
+	pourcentageValue = clamp(pourcentageValue, 0.25, 1.0)
 
 	# Appliquer la valeur à la barre de progression
 	value = pourcentageValue * 100
