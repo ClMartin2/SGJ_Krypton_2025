@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvc8t67xw4sye"]
+
+[ext_resource type="Script" uid="uid://ccbypebkat2mh" path="res://Scripts/Gameplay/VictoryZone.gd" id="1_udbhj"]
+[ext_resource type="PackedScene" uid="uid://ca05ray6h02gy" path="res://Scenes/UI/VictoryScreen.tscn" id="2_pmtxe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13e7s"]
+size = Vector2(432, 163)
+
+[node name="VictoryZone" type="Area2D"]
+script = ExtResource("1_udbhj")
+winScreen = ExtResource("2_pmtxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_13e7s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
