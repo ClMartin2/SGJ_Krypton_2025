@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://84pmcghrpprl"]
+[gd_scene load_steps=7 format=3 uid="uid://84pmcghrpprl"]
 
 [ext_resource type="Texture2D" uid="uid://b6nyf1lrkw6tq" path="res://graphics/Image_Level2.png" id="1_2k3dv"]
 [ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="1_4038r"]
@@ -13,20 +13,6 @@ script/source = "extends Node2D
 var temperature : int = -100
 "
 
-[sub_resource type="Curve" id="Curve_4038r"]
-_data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_dwgg1"]
-curve = SubResource("Curve_4038r")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2k3dv"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 0, 0)
-scale_min = 5.0
-scale_max = 5.0
-alpha_curve = SubResource("CurveTexture_dwgg1")
-
 [node name="Level4" type="Node2D"]
 script = SubResource("GDScript_4038r")
 
@@ -39,14 +25,6 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_4038r")]
 position = Vector2(-311, -1835)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(0.6, 0.6)
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Player"]
-process_material = SubResource("ParticleProcessMaterial_2k3dv")
 
 [node name="Electrons" type="Node" parent="."]
 

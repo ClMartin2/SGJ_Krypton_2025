@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfao8blfjbm3n"]
+[gd_scene load_steps=8 format=3 uid="uid://bfao8blfjbm3n"]
 
 [ext_resource type="Script" uid="uid://ddpydqbwyhx1k" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dobln41r8gn4f" path="res://graphics/electron-player.png" id="2_qhqgy"]
@@ -6,6 +6,20 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 13.0
+
+[sub_resource type="Curve" id="Curve_qhqgy"]
+_data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_m7ahb"]
+curve = SubResource("Curve_qhqgy")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dqkch"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 5.0
+scale_max = 5.0
+alpha_curve = SubResource("CurveTexture_m7ahb")
 
 [node name="Player" type="CharacterBody2D"]
 light_mask = 2
@@ -27,5 +41,13 @@ shape = SubResource("CircleShape2D_g2els")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.6, 0.6)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+process_material = SubResource("ParticleProcessMaterial_dqkch")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

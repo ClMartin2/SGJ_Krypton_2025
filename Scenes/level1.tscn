@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bqfrevpw6ykqk"]
+[gd_scene load_steps=11 format=3 uid="uid://bqfrevpw6ykqk"]
 
 [ext_resource type="PackedScene" uid="uid://8xk0qr6cdihm" path="res://scenes/temp_min.tscn" id="1_ru4tf"]
 [ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="1_wwpf4"]
@@ -7,20 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_dwgg1"]
 [ext_resource type="PackedScene" uid="uid://dy4o6rtp4hrv3" path="res://scenes/temp_max.tscn" id="6_6sh32"]
 [ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="7_ejswk"]
-
-[sub_resource type="Curve" id="Curve_m7ahb"]
-_data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_m7ahb"]
-curve = SubResource("Curve_m7ahb")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m7ahb"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 0, 0)
-scale_min = 5.0
-scale_max = 5.0
-alpha_curve = SubResource("CurveTexture_m7ahb")
+[ext_resource type="PackedScene" uid="uid://bs761qp2kvc7f" path="res://scenes/Impurity/Impurity2.tscn" id="8_bbk5w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwgg1"]
 size = Vector2(5000, 200)
@@ -36,14 +23,6 @@ scale = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("1_wwpf4")]
 position = Vector2(535, 322)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(0.6, 0.6)
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Player"]
-process_material = SubResource("ParticleProcessMaterial_m7ahb")
 
 [node name="Electrons" type="Node" parent="."]
 
@@ -281,3 +260,7 @@ position = Vector2(3281, -1512)
 
 [node name="halo" parent="." instance=ExtResource("7_ejswk")]
 position = Vector2(-3199, -2255)
+
+[node name="Impurity" parent="." instance=ExtResource("8_bbk5w")]
+position = Vector2(2115, 415)
+scale = Vector2(2, 2)

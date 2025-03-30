@@ -51,7 +51,7 @@ scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_0hmgf")
 animation = &"fire"
 autoplay = "fire"
-frame_progress = 0.600116
+frame_progress = 0.362415
 speed_scale = 2.5
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
