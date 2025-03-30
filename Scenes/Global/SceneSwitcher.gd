@@ -9,10 +9,30 @@ func _ready() -> void:
 func switch_scene(res_path):
 	call_deferred("_deferred_switch_scene", res_path)
 	
-func _deferred_switch_scene(packedScene):
+func DestroyScene() -> void:
 	for child in get_tree().root.get_children():
-		if child is Node2D or child is Control or child is CanvasLayer:  # Vérifie si c'est un Node2D ou un Control (UI)
+		if child is Node2D:  
 			child.queue_free()
+			
+func Restart() -> void:
+	DestroyUI()
+	var scene_path = current_scene.scene_file_path  
+	
+	get_tree().change_scene_to_file(scene_path) 
+	
+	await get_tree().process_frame  
+	await get_tree().process_frame 
+
+	current_scene = get_tree().root.get_child(get_tree().root.get_child_count() - 1)  
+
+func DestroyUI() -> void:
+	for child in get_tree().root.get_children():
+		if child is Control or child is CanvasLayer:
+			child.queue_free()
+
+func _deferred_switch_scene(packedScene):
+	DestroyScene()
+	DestroyUI()
 	
 	current_scene = packedScene.instantiate()
 	get_tree().root.add_child(current_scene)
