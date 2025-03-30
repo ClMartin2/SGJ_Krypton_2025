@@ -1,19 +1,20 @@
-[gd_scene load_steps=19 format=3 uid="uid://dihyujii8gb3r"]
+[gd_scene load_steps=20 format=3 uid="uid://dihyujii8gb3r"]
 
 [ext_resource type="Texture2D" uid="uid://cmbti0git8m75" path="res://graphics/Niveau_5.png" id="1_x3cfr"]
-[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="2_xpykx"]
-[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="3_tr6mf"]
-[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_tr6mf"]
-[ext_resource type="PackedScene" uid="uid://8xk0qr6cdihm" path="res://scenes/temp_min.tscn" id="5_kex1u"]
-[ext_resource type="PackedScene" uid="uid://dy4o6rtp4hrv3" path="res://scenes/temp_max.tscn" id="6_wfwgi"]
-[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://scenes/VictoryZone.tscn" id="7_s86go"]
-[ext_resource type="PackedScene" uid="uid://f00fwsppedoh" path="res://scenes/Impurity/Impurity4.tscn" id="8_nk87h"]
-[ext_resource type="PackedScene" uid="uid://cdt3kpkt71dtx" path="res://scenes/Impurity/Impurity6.tscn" id="9_dfre2"]
-[ext_resource type="PackedScene" uid="uid://dcglcb5iilevu" path="res://scenes/Impurity/Impurity3.tscn" id="10_vpyi7"]
-[ext_resource type="PackedScene" uid="uid://dqgxa6tu7euqu" path="res://scenes/Impurity/Impurity7.tscn" id="11_4wmva"]
-[ext_resource type="PackedScene" uid="uid://cyot8tkwptymk" path="res://scenes/Impurity/Impurity8.tscn" id="12_yfsoo"]
-[ext_resource type="PackedScene" uid="uid://bs761qp2kvc7f" path="res://scenes/Impurity/Impurity2.tscn" id="13_3g176"]
-[ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://scenes/SpawnerElectrons.tscn" id="14_ypvww"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/player.tscn" id="2_xpykx"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="3_tr6mf"]
+[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://Scenes/ui.tscn" id="4_tr6mf"]
+[ext_resource type="PackedScene" uid="uid://8xk0qr6cdihm" path="res://Scenes/temp_min.tscn" id="5_kex1u"]
+[ext_resource type="PackedScene" uid="uid://dy4o6rtp4hrv3" path="res://Scenes/temp_max.tscn" id="6_wfwgi"]
+[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="7_s86go"]
+[ext_resource type="PackedScene" uid="uid://f00fwsppedoh" path="res://Scenes/Impurity/Impurity4.tscn" id="8_nk87h"]
+[ext_resource type="PackedScene" uid="uid://cdt3kpkt71dtx" path="res://Scenes/Impurity/Impurity6.tscn" id="9_dfre2"]
+[ext_resource type="PackedScene" uid="uid://dcglcb5iilevu" path="res://Scenes/Impurity/Impurity3.tscn" id="10_vpyi7"]
+[ext_resource type="PackedScene" uid="uid://dqgxa6tu7euqu" path="res://Scenes/Impurity/Impurity7.tscn" id="11_4wmva"]
+[ext_resource type="PackedScene" uid="uid://cyot8tkwptymk" path="res://Scenes/Impurity/Impurity8.tscn" id="12_yfsoo"]
+[ext_resource type="PackedScene" uid="uid://bs761qp2kvc7f" path="res://Scenes/Impurity/Impurity2.tscn" id="13_3g176"]
+[ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://Scenes/SpawnerElectrons.tscn" id="14_ypvww"]
+[ext_resource type="PackedScene" uid="uid://dvc8t67xw4sye" path="res://Scenes/VictoryZoneWithoutTexture.tscn" id="15_vpyi7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kex1u"]
 size = Vector2(155, 144)
@@ -154,6 +155,7 @@ scale = Vector2(5, 5)
 [node name="Impurity9" parent="Impurity" instance=ExtResource("8_nk87h")]
 position = Vector2(1769, 53)
 scale = Vector2(5, 5)
+script = null
 
 [node name="Impurity10" parent="Impurity" instance=ExtResource("11_4wmva")]
 position = Vector2(1926, -258)
@@ -193,3 +195,19 @@ numberToSpawn = 10
 position = Vector2(-329, -1210)
 radius = 150
 numberToSpawn = 10
+
+[node name="VictoryZone2" parent="." instance=ExtResource("15_vpyi7")]
+position = Vector2(1772, 55)
+scale = Vector2(0.369951, 1)
+
+[node name="VictoryZone3" parent="." instance=ExtResource("15_vpyi7")]
+position = Vector2(1935, -250)
+scale = Vector2(0.369951, 1)
+
+[node name="VictoryZone4" parent="." instance=ExtResource("15_vpyi7")]
+position = Vector2(1795, -583)
+scale = Vector2(0.369951, 1)
+
+[node name="VictoryZone5" parent="." instance=ExtResource("15_vpyi7")]
+position = Vector2(1848, -1231)
+scale = Vector2(0.369951, 1)
