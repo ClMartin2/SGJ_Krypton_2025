@@ -1,44 +1,23 @@
-[gd_scene load_steps=11 format=3 uid="uid://dheet7k2i2bg2"]
+[gd_scene load_steps=8 format=3 uid="uid://dhbecqpo2xifo"]
 
-[ext_resource type="Texture2D" uid="uid://b6nyf1lrkw6tq" path="res://graphics/Image_Level2.png" id="1_2k3dv"]
-[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/player.tscn" id="1_4038r"]
-[ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="2_2k3dv"]
-[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://Scenes/ui.tscn" id="4_2k3dv"]
-[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="5_alqfr"]
-[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="6_styii"]
+[ext_resource type="Texture2D" uid="uid://b6nyf1lrkw6tq" path="res://graphics/Image_Level2.png" id="1_enqk4"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/player.tscn" id="2_eguui"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="3_ys3ak"]
+[ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="4_achdq"]
+[ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://Scenes/SpawnerElectrons.tscn" id="5_0vxl1"]
+[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="6_ypqhe"]
+[ext_resource type="PackedScene" uid="uid://djqncxc7s00ts" path="res://Scenes/Impurity.tscn" id="7_tw4yl"]
 
-[sub_resource type="GDScript" id="GDScript_4038r"]
-script/source = "extends Node2D
-
-
-var temperature : int = -100
-"
-
-[sub_resource type="Curve" id="Curve_4038r"]
-_data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_dwgg1"]
-curve = SubResource("Curve_4038r")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2k3dv"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 0, 0)
-scale_min = 5.0
-scale_max = 5.0
-alpha_curve = SubResource("CurveTexture_dwgg1")
-
-[node name="Level2" type="Node2D"]
-script = SubResource("GDScript_4038r")
+[node name="Level6" type="Node2D"]
 
 [node name="BG" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(2596, -159)
 scale = Vector2(3.43178, 3.58476)
-texture = ExtResource("1_2k3dv")
+texture = ExtResource("1_enqk4")
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("1_4038r")]
+[node name="Player" parent="." instance=ExtResource("2_eguui")]
 position = Vector2(-311, -1835)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -46,162 +25,153 @@ zoom = Vector2(0.6, 0.6)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Player"]
-process_material = SubResource("ParticleProcessMaterial_2k3dv")
+[node name="halo" parent="." instance=ExtResource("3_ys3ak")]
+position = Vector2(-2773, -1401)
 
 [node name="Electrons" type="Node" parent="."]
 
-[node name="Electron" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(180, -1735)
 
-[node name="Electron2" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(-494, -1770)
-
-[node name="Electron3" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron3" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1177, 202)
 
-[node name="Electron4" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron4" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1946, -1752)
 
-[node name="Electron5" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron5" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2758, -1256)
 
-[node name="Electron6" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron6" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1145, 981)
 
-[node name="Electron7" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron7" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1103, -1716)
 
-[node name="Electron8" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron8" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1421, -1752)
 
-[node name="Electron10" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron10" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1640, -1762)
 
-[node name="Electron11" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron11" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(544, -1730)
 
-[node name="Electron12" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(3834, -1394)
+[node name="Electron12" parent="Electrons" instance=ExtResource("4_achdq")]
+position = Vector2(3825, -1475)
 
-[node name="Electron13" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(-139, -1674)
-
-[node name="Electron14" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(-135, -1875)
-
-[node name="Electron15" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron15" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2403, -787)
 
-[node name="Electron16" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron16" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(4257, -1393)
 
-[node name="Electron21" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron21" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1911, -1076)
 
-[node name="Electron22" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron22" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2919, -273)
 
-[node name="Electron23" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron23" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1199, -950)
 
-[node name="Electron24" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron24" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1183, -180)
 
-[node name="Electron25" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron25" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2906, -669)
 
-[node name="Electron26" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron26" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2462, -58)
 
-[node name="Electron27" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron27" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2027, 84)
 
-[node name="Electron28" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron28" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(3735, 74)
 
-[node name="Electron29" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron29" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(3805, 421)
 
-[node name="Electron30" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron30" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(3297, 963)
 
-[node name="Electron31" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron31" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(3541, 729)
 
-[node name="Electron32" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron32" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(3486, 1283)
 
-[node name="Electron41" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron41" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(6257, -124)
 
-[node name="Electron42" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron42" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(5682, -63)
 
-[node name="Electron43" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron43" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(5474, 164)
 
-[node name="Electron44" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron44" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(5449, 616)
 
-[node name="Electron45" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron45" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(5474, 1460)
 
-[node name="Electron46" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron46" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(5480, 928)
 
-[node name="Electron47" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron47" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(4856, 1491)
 
-[node name="Electron48" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron48" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(4085, 1546)
 
-[node name="Electron49" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron49" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(4361, 1515)
 
-[node name="Electron50" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron50" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(3663, 1485)
 
-[node name="Electron51" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron51" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(3406, 1491)
 
-[node name="Electron33" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron33" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2768, 719)
 
-[node name="Electron34" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron34" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1900, 218)
 
-[node name="Electron35" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron35" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(4661, -1444)
 
-[node name="Electron36" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron36" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2107, 578)
 
-[node name="Electron37" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(2889, -1508)
+[node name="Electron37" parent="Electrons" instance=ExtResource("4_achdq")]
+position = Vector2(3125, -1443)
 
-[node name="Electron38" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(3984, -1966)
+[node name="Electron38" parent="Electrons" instance=ExtResource("4_achdq")]
+position = Vector2(5205, -1429)
 
-[node name="Electron39" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron39" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2117, -86)
 
-[node name="Electron40" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(3644, -917)
+[node name="Electron40" parent="Electrons" instance=ExtResource("4_achdq")]
+position = Vector2(3832, -1329)
 
-[node name="Electron17" parent="Electrons" instance=ExtResource("2_2k3dv")]
-position = Vector2(3521, -1279)
+[node name="Electron17" parent="Electrons" instance=ExtResource("4_achdq")]
+position = Vector2(3405, -1422)
 
-[node name="Electron18" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron18" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(810, -1752)
 
-[node name="Electron19" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron19" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2669, -1768)
 
-[node name="Electron20" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron20" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(1147, 558)
 
-[node name="Electron9" parent="Electrons" instance=ExtResource("2_2k3dv")]
+[node name="Electron9" parent="Electrons" instance=ExtResource("4_achdq")]
 position = Vector2(2352, 834)
 
 [node name="Borders" type="Node2D" parent="."]
@@ -261,10 +231,20 @@ metadata/_edit_lock_ = true
 polygon = PackedVector2Array(-677, -328, -653, -572, -783, -1134, -303, -1183, -246, -344, 2213, -426, 2278, -1915, 2628, -1997, 2685, -1753, 2783, -971, 2791, -621, 2734, 22, 2669, 71, 2017, 120, 1350, 201, -685, 242, -1328, 282, -2061, 266, -2167, 225, -2207, 160, -2134, -247, -2093, -279, -2061, -214, -1898, -263)
 metadata/_edit_lock_ = true
 
-[node name="UI" parent="." instance=ExtResource("4_2k3dv")]
+[node name="SpawnerElectrons" parent="." instance=ExtResource("5_0vxl1")]
+position = Vector2(65, -1720)
+numberToSpawn = 0
 
-[node name="halo" parent="." instance=ExtResource("5_alqfr")]
-position = Vector2(-3063, -2256)
+[node name="SpawnerElectrons2" parent="." instance=ExtResource("5_0vxl1")]
+position = Vector2(1036, -1766)
+numberToSpawn = 20
 
-[node name="VictoryZone" parent="." instance=ExtResource("6_styii")]
-position = Vector2(-375, -2019)
+[node name="SpawnerElectrons3" parent="." instance=ExtResource("5_0vxl1")]
+position = Vector2(1566, -1766)
+numberToSpawn = 20
+
+[node name="VictoryZone" parent="." instance=ExtResource("6_ypqhe")]
+position = Vector2(-362, -2011)
+
+[node name="Impurity" parent="." instance=ExtResource("7_tw4yl")]
+position = Vector2(-303, -1684)

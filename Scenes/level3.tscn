@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cdhlogru0pbun"]
 
 [ext_resource type="Texture2D" uid="uid://b6nyf1lrkw6tq" path="res://graphics/Image_Level2.png" id="1_nm84x"]
-[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/Player.tscn" id="2_d77hw"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/player.tscn" id="2_d77hw"]
 [ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="3_jaajx"]
 [ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="3_qrg6c"]
 [ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://Scenes/SpawnerElectrons.tscn" id="4_d77hw"]
