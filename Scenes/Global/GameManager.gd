@@ -12,6 +12,9 @@ func PauseGame():
 func ResumeGame():
 	GetPlayer().Resume()
 	
+func GetSuperMinTemp():
+	return GetDataRessource().superTemp
+
 func GetTxtEndLevel() -> String:
 	return GetDataRessource().txtEndLevel
 	

@@ -5,6 +5,10 @@ var current_scene = null
 func _ready() -> void:
 	var root = get_tree().root
 	current_scene = root.get_child(root.get_child_count() - 1)
+	
+	if(current_scene is Node2D):
+		Global.minSuperTemp = GameManager.GetSuperMinTemp()
+
 
 func switch_scene(res_path):
 	call_deferred("_deferred_switch_scene", res_path)
@@ -42,3 +46,4 @@ func _deferred_switch_scene(packedScene):
 		var startScreen : PackedScene = load("res://Scenes/UI/StartScreen.tscn")
 		GameManager.AddUI(startScreen)
 		GameManager.PauseGame()
+		Global.minSuperTemp = GameManager.GetSuperMinTemp()
