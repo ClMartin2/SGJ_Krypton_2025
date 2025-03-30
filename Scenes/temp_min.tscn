@@ -1,10 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://8xk0qr6cdihm"]
+[gd_scene load_steps=10 format=3 uid="uid://8xk0qr6cdihm"]
 
 [ext_resource type="Script" uid="uid://c704yv64ny54e" path="res://temp_min.gd" id="1_cs83r"]
-[ext_resource type="Texture2D" uid="uid://72u3vilyn2cy" path="res://icon.svg" id="2_3ritv"]
+[ext_resource type="Texture2D" uid="uid://ct035xop54dha" path="res://animations/ice/froid-1.png" id="2_11747"]
+[ext_resource type="Texture2D" uid="uid://d204alx7b3f1f" path="res://animations/ice/froid-2.png" id="3_b3vgb"]
+[ext_resource type="Texture2D" uid="uid://c8rfpg2swuegp" path="res://animations/ice/froid-3.png" id="4_38f13"]
+[ext_resource type="Texture2D" uid="uid://b1ani2bh34euq" path="res://animations/ice/froid-4.png" id="5_k27b0"]
+[ext_resource type="Texture2D" uid="uid://41wekqp30ewd" path="res://animations/ice/froid-5.png" id="6_ghh75"]
+[ext_resource type="Texture2D" uid="uid://cd80vt3x6x84u" path="res://animations/ice/froid-6.png" id="7_a31a3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ljtp"]
-size = Vector2(88, 60)
+[sub_resource type="CircleShape2D" id="CircleShape2D_vd32l"]
+radius = 46.0435
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fww6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_11747")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b3vgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_38f13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_k27b0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ghh75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a31a3")
+}],
+"loop": true,
+"name": &"ice",
+"speed": 5.0
+}]
 
 [node name="temp_min" type="Area2D"]
 light_mask = 8
@@ -12,11 +43,14 @@ visibility_layer = 2
 script = ExtResource("1_cs83r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_2ljtp")
+shape = SubResource("CircleShape2D_vd32l")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.5, 0)
-scale = Vector2(0.679688, 0.46875)
-texture = ExtResource("2_3ritv")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_7fww6")
+animation = &"ice"
+autoplay = "ice"
+frame_progress = 0.998607
+speed_scale = 2.5
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
