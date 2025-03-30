@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdhlogru0pbun"]
+[gd_scene load_steps=8 format=3 uid="uid://cdhlogru0pbun"]
 
 [ext_resource type="Texture2D" uid="uid://b6nyf1lrkw6tq" path="res://graphics/Image_Level2.png" id="1_nm84x"]
-[ext_resource type="PackedScene" uid="uid://cbb07bk3jc8kn" path="res://Scenes/Player.tscn" id="2_d77hw"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/Player.tscn" id="2_d77hw"]
 [ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="3_jaajx"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="3_qrg6c"]
 [ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://Scenes/SpawnerElectrons.tscn" id="4_d77hw"]
 [ext_resource type="PackedScene" uid="uid://djqncxc7s00ts" path="res://Scenes/Impurity.tscn" id="5_jaajx"]
 [ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="6_mrxql"]
@@ -23,6 +24,9 @@ position = Vector2(-311, -1835)
 zoom = Vector2(0.6, 0.6)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="halo" parent="." instance=ExtResource("3_qrg6c")]
+position = Vector2(-2773, -1401)
 
 [node name="Electrons" type="Node" parent="."]
 

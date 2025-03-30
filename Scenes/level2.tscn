@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://dheet7k2i2bg2"]
 
 [ext_resource type="Texture2D" uid="uid://b6nyf1lrkw6tq" path="res://graphics/Image_Level2.png" id="1_2k3dv"]
-[ext_resource type="PackedScene" uid="uid://cbb07bk3jc8kn" path="res://scenes/player.tscn" id="1_4038r"]
-[ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://scenes/electron.tscn" id="2_2k3dv"]
-[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_2k3dv"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/Player.tscn" id="1_4038r"]
+[ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="2_2k3dv"]
+[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://Scenes/ui.tscn" id="4_2k3dv"]
 [ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="5_alqfr"]
 
 [sub_resource type="GDScript" id="GDScript_4038r"]
@@ -27,7 +27,7 @@ scale_min = 5.0
 scale_max = 5.0
 alpha_curve = SubResource("CurveTexture_dwgg1")
 
-[node name="Level2" type="Node2D"]
+[node name="Level4" type="Node2D"]
 script = SubResource("GDScript_4038r")
 
 [node name="BG" type="Sprite2D" parent="."]
