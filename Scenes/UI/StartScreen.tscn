@@ -32,15 +32,16 @@ anchor_bottom = 0.785
 offset_left = 0.399998
 offset_top = 0.0799866
 offset_right = -0.23999
-offset_bottom = -0.200012
+offset_bottom = -69.2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_pw0np")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 60
 text = "Petite anecdote du debut"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
 one_shot = true
 autostart = true
 

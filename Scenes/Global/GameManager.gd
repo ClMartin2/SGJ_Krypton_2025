@@ -1,5 +1,11 @@
 extends Node
 	
+func _ready() -> void:
+	var scene_path = "res://Scenes/Sound/Music.tscn"
+	var scene = load(scene_path).instantiate()
+	add_child(scene)
+	print(scene)
+
 func PauseGame():
 	GetPlayer().Pause()
 	
@@ -21,6 +27,7 @@ func GetStartBanner():
 	return GetDataRessource().startBanner
 	
 func GetCurrentScene():
+	print (SceneSwitcher.current_scene.name)
 	return SceneSwitcher.current_scene.name
 
 func GetPlayer():
