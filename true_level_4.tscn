@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfvnq2aa1q4si"]
+[gd_scene load_steps=6 format=3 uid="uid://cfvnq2aa1q4si"]
 
 [ext_resource type="Texture2D" uid="uid://cm4862xukfp33" path="res://graphics/Niveau_4.png" id="1_lek0q"]
 [ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="2_nicvv"]
 [ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="3_0saex"]
 [ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_nicvv"]
+[ext_resource type="PackedScene" uid="uid://8xk0qr6cdihm" path="res://scenes/temp_min.tscn" id="5_0saex"]
 
 [node name="True_level_4" type="Node2D"]
 
@@ -31,3 +32,11 @@ position = Vector2(-1587, 1457)
 position = Vector2(-2945, -528)
 
 [node name="UI" parent="." instance=ExtResource("4_nicvv")]
+
+[node name="temp_min" parent="." instance=ExtResource("5_0saex")]
+position = Vector2(-482, 777)
+scale = Vector2(3.5, 3.5)
+
+[node name="temp_min2" parent="." instance=ExtResource("5_0saex")]
+position = Vector2(1105, 811)
+scale = Vector2(3.5, 3.5)

@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cw7j5gv84hqsg"]
+[gd_scene load_steps=11 format=3 uid="uid://cw7j5gv84hqsg"]
 
 [ext_resource type="Texture2D" uid="uid://ddqemxv6qfyl8" path="res://graphics/Niveau_6.png" id="1_4rtx3"]
 [ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="2_f6d8q"]
 [ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="3_y7c5w"]
 [ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_y7c5w"]
+[ext_resource type="PackedScene" uid="uid://8xk0qr6cdihm" path="res://scenes/temp_min.tscn" id="5_ulglo"]
+[ext_resource type="PackedScene" uid="uid://dy4o6rtp4hrv3" path="res://scenes/temp_max.tscn" id="6_dvio1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ulglo"]
 size = Vector2(155, 144)
@@ -80,3 +82,28 @@ position = Vector2(-1587, 1457)
 position = Vector2(-3537, -370)
 
 [node name="UI" parent="." instance=ExtResource("4_y7c5w")]
+
+[node name="temp_min" parent="." instance=ExtResource("5_ulglo")]
+position = Vector2(-1634, -947)
+scale = Vector2(3, 3)
+metadata/_edit_lock_ = true
+
+[node name="temp_min2" parent="." instance=ExtResource("5_ulglo")]
+position = Vector2(-995, -1195)
+scale = Vector2(5, 5)
+metadata/_edit_lock_ = true
+
+[node name="temp_min3" parent="." instance=ExtResource("5_ulglo")]
+position = Vector2(-701, 1043)
+scale = Vector2(4, 4)
+metadata/_edit_lock_ = true
+
+[node name="temp_max" parent="." instance=ExtResource("6_dvio1")]
+position = Vector2(-105, -509)
+scale = Vector2(6, 6)
+metadata/_edit_lock_ = true
+
+[node name="temp_max2" parent="." instance=ExtResource("6_dvio1")]
+position = Vector2(472, -58)
+scale = Vector2(6, 6)
+metadata/_edit_lock_ = true
