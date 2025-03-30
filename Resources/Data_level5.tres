@@ -8,4 +8,6 @@ script = ExtResource("1_cffrh")
 txtStartLevel = "Presque "
 txtEndLevel = "Vous avez tout tenté : vous avez baissé la température deux fois, esquivé les pièges, contourné les impuretés... Mais rien. La supraconductivité ne s’est jamais manifestée. Le niobium, malgré tout son potentiel, a besoin de conditions encore plus extrêmes pour devenir supraconducteur."
 startBanner = ExtResource("2_t8184")
+superTemp = -195.0
+startTemp = 150.0
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"

@@ -8,6 +8,7 @@ func _ready() -> void:
 	
 	if(current_scene is Node2D):
 		Global.minSuperTemp = GameManager.GetSuperMinTemp()
+		Global.temperature = GameManager.GetStartMinTemp()
 
 
 func switch_scene(res_path):
@@ -47,3 +48,4 @@ func _deferred_switch_scene(packedScene):
 		GameManager.AddUI(startScreen)
 		GameManager.PauseGame()
 		Global.minSuperTemp = GameManager.GetSuperMinTemp()
+		Global.temperature = GameManager.GetStartMinTemp()

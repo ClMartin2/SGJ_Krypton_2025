@@ -6,3 +6,4 @@ class_name DataLevel
 @export var txtEndLevel: String = "Cool le lyon"
 @export var startBanner: Texture
 @export var superTemp: float = -195
+@export var startTemp : float = 150

@@ -9,4 +9,5 @@ txtStartLevel = "Fuis moi je te suis, suis moi je te fuis..."
 txtEndLevel = "Vous l’avez senti, n’est-ce pas ? Une sorte de poussée invisible, un léger rebond à chaque fois que vous approchiez un autre électron. Ce n’était pas de la maladresse : c’était de la répulsion. Dans ce labyrinthe tranquille de cuivre, vous venez de découvrir le tout premier secret de la conduction :    les électrons ne s’aiment pas trop, c'est ce qu'on appelle la répulsion de Coulomb."
 startBanner = ExtResource("2_w01xc")
 superTemp = -195.0
+startTemp = 150.0
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"

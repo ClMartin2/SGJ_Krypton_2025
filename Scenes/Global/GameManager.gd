@@ -4,7 +4,6 @@ func _ready() -> void:
 	var scene_path = "res://Scenes/Sound/Music.tscn"
 	var scene = load(scene_path).instantiate()
 	add_child(scene)
-	print(scene)
 
 func PauseGame():
 	GetPlayer().Pause()
@@ -14,6 +13,9 @@ func ResumeGame():
 	
 func GetSuperMinTemp():
 	return GetDataRessource().superTemp
+	
+func GetStartMinTemp():
+	return GetDataRessource().startTemp
 
 func GetTxtEndLevel() -> String:
 	return GetDataRessource().txtEndLevel

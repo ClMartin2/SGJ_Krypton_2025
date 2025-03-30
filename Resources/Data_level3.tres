@@ -8,4 +8,6 @@ script = ExtResource("1_5jd7y")
 txtStartLevel = "Déménagement"
 txtEndLevel = "Quelque chose a changé. Dans ce nouveau métal appelé Niobium, vos déplacements sont devenus plus fluides. Puis, en baissant la température… un phénomène remarquable s’est produit : la supraconductivité ! Les électrons se sont liés en paires de Cooper, glissant à travers le labyrinthe sans aucune résistance. Vous venez de ressentir un transport parfait."
 startBanner = ExtResource("2_qmm04")
+superTemp = -195.0
+startTemp = 150.0
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"
