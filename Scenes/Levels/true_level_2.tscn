@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjrxwfyoy0pyr"]
+[gd_scene load_steps=6 format=3 uid="uid://bjrxwfyoy0pyr"]
 
 [ext_resource type="Texture2D" uid="uid://b375p8ic2fnox" path="res://graphics/Niveau_2.png" id="1_fhsda"]
-[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="2_fkfp0"]
-[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="3_xxcll"]
-[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_fkfp0"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/player.tscn" id="2_fkfp0"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="3_xxcll"]
+[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://Scenes/ui.tscn" id="4_fkfp0"]
+[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="5_7joa5"]
 
-[node name="True_level_2" type="Node2D"]
+[node name="level2" type="Node2D"]
 
 [node name="BG" type="Sprite2D" parent="."]
 texture = ExtResource("1_fhsda")
@@ -31,3 +32,8 @@ position = Vector2(-1571, 1491)
 position = Vector2(-3543, -136)
 
 [node name="UI" parent="." instance=ExtResource("4_fkfp0")]
+
+[node name="VictoryZone" parent="." instance=ExtResource("5_7joa5")]
+position = Vector2(1730, 1331)
+rotation = 1.5708
+scale = Vector2(0.8, 0.8)

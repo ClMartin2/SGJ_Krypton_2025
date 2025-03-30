@@ -1,20 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnrvihegxivkm"]
+[gd_scene load_steps=5 format=3 uid="uid://cnrvihegxivkm"]
 
 [ext_resource type="Script" uid="uid://ccbypebkat2mh" path="res://Scripts/Gameplay/VictoryZone.gd" id="1_gscpv"]
 [ext_resource type="PackedScene" uid="uid://ca05ray6h02gy" path="res://Scenes/UI/VictoryScreen.tscn" id="2_7oc57"]
+[ext_resource type="Texture2D" uid="uid://3710itvubq3a" path="res://graphics/Finishbanner/Damier.png" id="3_7v707"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13e7s"]
-size = Vector2(432, 252)
+size = Vector2(432, 163)
 
 [node name="VictoryZone" type="Area2D"]
 script = ExtResource("1_gscpv")
 winScreen = ExtResource("2_7oc57")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_13e7s")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(-11, 2)
-polygon = PackedVector2Array(-189, -109, -195, 92, 215, 95, 210, -103)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.224477, 0.224477)
+texture = ExtResource("3_7v707")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
