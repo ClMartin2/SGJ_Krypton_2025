@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="electrons"
-run/main_scene="uid://cgxaiakgfw1gp"
+run/main_scene="uid://cbq3wrf708edq"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
