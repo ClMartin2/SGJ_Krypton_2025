@@ -103,7 +103,7 @@ metadata/_edit_lock_ = true
 
 [node name="temp_min3" parent="." instance=ExtResource("5_ulglo")]
 position = Vector2(-701, 1043)
-scale = Vector2(4, 4)
+scale = Vector2(2.5, 2.5)
 metadata/_edit_lock_ = true
 
 [node name="temp_max" parent="." instance=ExtResource("6_dvio1")]
