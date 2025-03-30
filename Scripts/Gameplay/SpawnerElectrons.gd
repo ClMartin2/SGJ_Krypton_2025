@@ -28,13 +28,14 @@ func Spawn():
 	var randomPosition = Vector2(x, y)
 	
 	for i in range(numberToSpawn):
-		var object = electron.instantiate()
-		object.position = randomPosition
+		var electronObject = electron.instantiate()
+		electronObject.position = randomPosition
 				
-		var electron = object as Electron
+		var electronScript = electronObject as Electron
 		var XVelocity = randf_range(randomRangeXVelocity.x,randomRangeXVelocity.y)
 		var YVelocity = randf_range(randomRangeYVelocity.x,randomRangeYVelocity.y)
 		var RandomVelocity = Vector2(XVelocity,YVelocity)
-		electron.startVelocity = RandomVelocity
 		
-		add_child(object)
+		if(electronScript != null):
+			electronScript.startVelocity = RandomVelocity
+			add_child(electronObject)

@@ -16,7 +16,7 @@ func _on_area_entered(_area: Area2D) -> void:
 	print("YOU ENTERED")
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	#pass # Replace with function body.
 	print("body ENTERED")
 	Global.temperature -= 10
