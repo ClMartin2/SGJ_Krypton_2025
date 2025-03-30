@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DataLevel" load_steps=2 format=3 uid="uid://bddk53o72b51p"]
+
+[ext_resource type="Script" uid="uid://c5po5byxxp4s0" path="res://Scripts/Ressources/R_DataLevele.gd" id="1_ndqwc"]
+
+[resource]
+script = ExtResource("1_ndqwc")
+txtStartLevel = "L'Usain bolt des métaux"
+txtEndLevel = "Bienvenue dans le monde des cuprates — des matériaux exotiques capables de devenir supraconducteurs à des températures bien plus élevées. Cette fois, votre refroidissement a suffi : la résistance a disparu, le mouvement est devenu parfaitement fluide. Vous avez activé une supraconductivité d’un autre genre. Ici, vous ne conduisez plus…    vous surfez sur l’onde quantique."
+metadata/_custom_type_script = "uid://c5po5byxxp4s0"

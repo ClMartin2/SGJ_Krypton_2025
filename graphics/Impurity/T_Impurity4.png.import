@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckpyqgijgah8o"
-path="res://.godot/imported/T_Impurete.png-0e5366a1cff7f8b0044a5fd576ba8abd.ctex"
+uid="uid://cuhq36c220cg3"
+path="res://.godot/imported/T_Impurity4.png-582ed048100ee024db77313476cb2911.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/T_Impurete.png"
-dest_files=["res://.godot/imported/T_Impurete.png-0e5366a1cff7f8b0044a5fd576ba8abd.ctex"]
+source_file="res://graphics/Impurity/T_Impurity4.png"
+dest_files=["res://.godot/imported/T_Impurity4.png-582ed048100ee024db77313476cb2911.ctex"]
 
 [params]
 

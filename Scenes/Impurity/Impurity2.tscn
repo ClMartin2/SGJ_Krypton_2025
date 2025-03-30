@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs761qp2kvc7f"]
+
+[ext_resource type="Script" uid="uid://dp6qxajtcupok" path="res://Scripts/Gameplay/Impurity.gd" id="1_0q7es"]
+[ext_resource type="PackedScene" uid="uid://cu2hkabf5o61d" path="res://Scenes/UI/LooseScreen.tscn" id="2_dp3ne"]
+[ext_resource type="Texture2D" uid="uid://cnlpv51dwo32g" path="res://graphics/Impurity/T_Impurity2.png" id="3_0q7es"]
+
+[node name="Impurity" type="Area2D"]
+script = ExtResource("1_0q7es")
+looseScreen = ExtResource("2_dp3ne")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1.8663, -16.3899, -4.38346, -13.1176, -6, -8, -12.6062, -8.16714, -16.3819, -7.74761, -17.1371, -5.9017, -16.2141, -2.96501, -12.6901, 0.2234, -10.1729, 1.8176, -11.012, 3.99914, -12.9418, 9.03347, -12.774, 13.6483, -9.75341, 14.4034, -7.23625, 13.9, -4.8869, 12.977, -2.70536, 11.9702, -1.02725, 11.3828, 0.65086, 12.977, 2.8324, 14.9908, 5.68518, 17.424, 8.45406, 18.5987, 10.4678, 16.9206, 10.9712, 13.2287, 10.5517, 10.2081, 10.0483, 7.52317, 9.46093, 4.75429, 15.586, 0.894644, 17.348, -3.13282, 13.4045, -6.15341, 6.50274, -7.2317, 2.79229, -14.0326, 1.40601, -16.6416)
+
+[node name="Polygon2D" type="Sprite2D" parent="."]
+position = Vector2(8.5783, 55.494)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_0q7es")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

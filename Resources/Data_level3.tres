@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_5jd7y")
-txtEndLevel = "Cool le lyon c'est la fin"
-txtStartLevel = "Le feu au coeur"
+txtStartLevel = "Déménagement"
+txtEndLevel = "Quelque chose a changé. Dans ce nouveau métal appelé Niobium, vos déplacements sont devenus plus fluides. Puis, en baissant la température… un phénomène remarquable s’est produit : la supraconductivité ! Les électrons se sont liés en paires de Cooper, glissant à travers le labyrinthe sans aucune résistance. Vous venez de ressentir un transport parfait."
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"
