@@ -56,14 +56,12 @@ position = Vector2(526, -368)
 radius = 150
 numberToSpawn = 10
 
-[node name="SpawnerElectrons3" type="Node" parent="."]
-
-[node name="SpawnerElectrons2" parent="SpawnerElectrons3" instance=ExtResource("6_d17r2")]
+[node name="SpawnerElectrons4" parent="SpawnerElectrons2" instance=ExtResource("6_d17r2")]
 position = Vector2(1977, -1213)
 radius = 150
 numberToSpawn = 10
 
-[node name="SpawnerElectrons3" parent="SpawnerElectrons3" instance=ExtResource("6_d17r2")]
+[node name="SpawnerElectrons5" parent="SpawnerElectrons2" instance=ExtResource("6_d17r2")]
 position = Vector2(-208, -1163)
 radius = 150
 numberToSpawn = 10

@@ -1,18 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://chyivtjtjhmv7"]
+[gd_scene load_steps=15 format=3 uid="uid://chyivtjtjhmv7"]
 
 [ext_resource type="Texture2D" uid="uid://crc68ar2feno8" path="res://graphics/Niveau_3.png" id="1_1fvvm"]
-[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/player.tscn" id="2_2326i"]
-[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="3_aawc1"]
-[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://Scenes/ui.tscn" id="4_2326i"]
-[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="5_h2csj"]
-[ext_resource type="PackedScene" uid="uid://djqncxc7s00ts" path="res://Scenes/Impurity/Impurity1.tscn" id="6_gqusr"]
-[ext_resource type="PackedScene" uid="uid://bs761qp2kvc7f" path="res://Scenes/Impurity/Impurity2.tscn" id="7_7on8j"]
-[ext_resource type="PackedScene" uid="uid://dcglcb5iilevu" path="res://Scenes/Impurity/Impurity3.tscn" id="8_db0mq"]
-[ext_resource type="PackedScene" uid="uid://f00fwsppedoh" path="res://Scenes/Impurity/Impurity4.tscn" id="9_pi3vi"]
-[ext_resource type="PackedScene" uid="uid://bafaun5vkdpta" path="res://Scenes/Impurity/Impurity5.tscn" id="10_kp6j0"]
-[ext_resource type="PackedScene" uid="uid://dqgxa6tu7euqu" path="res://Scenes/Impurity/Impurity7.tscn" id="11_gkk61"]
-[ext_resource type="PackedScene" uid="uid://cyot8tkwptymk" path="res://Scenes/Impurity/Impurity8.tscn" id="12_aysrj"]
-[ext_resource type="PackedScene" uid="uid://cdt3kpkt71dtx" path="res://Scenes/Impurity/Impurity6.tscn" id="13_ihlol"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="2_2326i"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="3_aawc1"]
+[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_2326i"]
+[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://scenes/VictoryZone.tscn" id="5_h2csj"]
+[ext_resource type="PackedScene" uid="uid://djqncxc7s00ts" path="res://scenes/Impurity/Impurity1.tscn" id="6_gqusr"]
+[ext_resource type="PackedScene" uid="uid://bs761qp2kvc7f" path="res://scenes/Impurity/Impurity2.tscn" id="7_7on8j"]
+[ext_resource type="PackedScene" uid="uid://dcglcb5iilevu" path="res://scenes/Impurity/Impurity3.tscn" id="8_db0mq"]
+[ext_resource type="PackedScene" uid="uid://f00fwsppedoh" path="res://scenes/Impurity/Impurity4.tscn" id="9_pi3vi"]
+[ext_resource type="PackedScene" uid="uid://bafaun5vkdpta" path="res://scenes/Impurity/Impurity5.tscn" id="10_kp6j0"]
+[ext_resource type="PackedScene" uid="uid://dqgxa6tu7euqu" path="res://scenes/Impurity/Impurity7.tscn" id="11_gkk61"]
+[ext_resource type="PackedScene" uid="uid://cyot8tkwptymk" path="res://scenes/Impurity/Impurity8.tscn" id="12_aysrj"]
+[ext_resource type="PackedScene" uid="uid://cdt3kpkt71dtx" path="res://scenes/Impurity/Impurity6.tscn" id="13_ihlol"]
+[ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://scenes/SpawnerElectrons.tscn" id="14_6h6ag"]
 
 [node name="level3" type="Node2D"]
 
@@ -94,3 +95,30 @@ scale = Vector2(2, 2)
 [node name="Impurity11" parent="Impurity12" instance=ExtResource("9_pi3vi")]
 position = Vector2(-1692, -654)
 scale = Vector2(2, 2)
+
+[node name="SpawnerElectrons2" type="Node" parent="."]
+
+[node name="SpawnerElectrons" parent="SpawnerElectrons2" instance=ExtResource("14_6h6ag")]
+position = Vector2(-1568, 503)
+radius = 150
+numberToSpawn = 15
+
+[node name="SpawnerElectrons2" parent="SpawnerElectrons2" instance=ExtResource("14_6h6ag")]
+position = Vector2(124, 1306)
+radius = 150
+numberToSpawn = 10
+
+[node name="SpawnerElectrons3" parent="SpawnerElectrons2" instance=ExtResource("14_6h6ag")]
+position = Vector2(526, -368)
+radius = 150
+numberToSpawn = 10
+
+[node name="SpawnerElectrons4" parent="SpawnerElectrons2" instance=ExtResource("14_6h6ag")]
+position = Vector2(1977, -1213)
+radius = 150
+numberToSpawn = 10
+
+[node name="SpawnerElectrons5" parent="SpawnerElectrons2" instance=ExtResource("14_6h6ag")]
+position = Vector2(-208, -1163)
+radius = 150
+numberToSpawn = 10

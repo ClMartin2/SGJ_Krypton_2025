@@ -9,5 +9,5 @@ txtStartLevel = "Chaud chaud chaud cacao !"
 txtEndLevel = "Vous êtes toujours dans le cuivre… mais cette fois, tout est plus chaud, plus dense, et plus difficile. Le mouvement devient chaotique, ralenti. En cause ? La température élevée fait vibrer le matériau (c'est ce qu'on appelle des phonons !) et la foule d’électrons rend la circulation plus difficile. Voilà ce que c’est, la conduction en conditions extrêmes."
 startBanner = ExtResource("2_q3f7q")
 superTemp = -195.0
-startTemp = 120.0
+startTemp = -120.0
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"

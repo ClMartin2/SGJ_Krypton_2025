@@ -5,9 +5,9 @@
 
 [resource]
 script = ExtResource("1_5jd7y")
-txtStartLevel = "Déménagement"
-txtEndLevel = "Quelque chose a changé. Dans ce nouveau métal appelé Niobium, vos déplacements sont devenus plus fluides. Puis, en baissant la température… un phénomène remarquable s’est produit : la supraconductivité ! Les électrons se sont liés en paires de Cooper, glissant à travers le labyrinthe sans aucune résistance. Vous venez de ressentir un transport parfait."
+txtStartLevel = "Un petit truc en plus"
+txtEndLevel = "Tous les chemins semblaient ouverts… jusqu’à ce qu’ils ne le soient plus. Impossible de passer, quoi que vous fassiez. Ce niveau n’était pas là pour être gagné. Vous venez de rencontrer un ennemi redoutable : les impuretés. Elles diffusent, arrêtent ou même expulsent les électrons du système. Parfois, ce n’est pas de votre faute — c’est le matériau lui-même."
 startBanner = ExtResource("2_qmm04")
 superTemp = -195.0
-startTemp = 150.0
+startTemp = -150.0
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"
