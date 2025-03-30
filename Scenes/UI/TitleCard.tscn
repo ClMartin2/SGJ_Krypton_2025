@@ -1,6 +1,100 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbq3wrf708edq"]
+[gd_scene load_steps=22 format=3 uid="uid://cbq3wrf708edq"]
 
-[ext_resource type="Texture2D" uid="uid://bymqms2sa21bi" path="res://graphics/Titlecard/CoupDeCoeur.png" id="1_eas1s"]
+[ext_resource type="Texture2D" uid="uid://d2llijvsh2bv8" path="res://graphics/Titlecard/Background/T_BackgroundTitleCard.png" id="1_33kiy"]
+[ext_resource type="Texture2D" uid="uid://c3ijeh8h5h4xv" path="res://graphics/Titlecard/Title/CoopdeCoeur1.png" id="2_5kt1a"]
+[ext_resource type="Texture2D" uid="uid://dvndkqo5uklqa" path="res://graphics/Titlecard/Title/CoopdeCoeur2.png" id="3_mc4c8"]
+[ext_resource type="Texture2D" uid="uid://1aypua8kwvtk" path="res://graphics/Titlecard/Title/CoopdeCoeur3.png" id="4_kyl23"]
+[ext_resource type="Texture2D" uid="uid://dmum7236e243u" path="res://graphics/Titlecard/Title/CoopdeCoeur4.png" id="5_x4k0d"]
+[ext_resource type="Texture2D" uid="uid://o4w8gtbdqgqg" path="res://graphics/Titlecard/TrouverlaFinDuLabyrinthe/TrouveLaFinDuLabyrinthe1.png" id="6_vsdpa"]
+[ext_resource type="Texture2D" uid="uid://n143ftiqc6fc" path="res://graphics/Titlecard/TrouverlaFinDuLabyrinthe/TrouveLaFinDuLabyrinthe2.png" id="7_f0i7h"]
+[ext_resource type="Texture2D" uid="uid://ddltqgh41phkk" path="res://graphics/Titlecard/TrouverlaFinDuLabyrinthe/TrouveLaFinDuLabyrinthe3.png" id="8_tb0s4"]
+[ext_resource type="Texture2D" uid="uid://duqwryj4f0p21" path="res://graphics/Titlecard/TrouverlaFinDuLabyrinthe/TrouveLaFinDuLabyrinthe4.png" id="9_41t5q"]
+[ext_resource type="PackedScene" uid="uid://c4ol6l8po6fmd" path="res://Scenes/UI/ButtonPlay.tscn" id="10_f0i7h"]
+[ext_resource type="Texture2D" uid="uid://d26v7i01ddkng" path="res://graphics/electronLove/electron_seul1-1.png" id="11_ss2ec"]
+[ext_resource type="Texture2D" uid="uid://b166qu0t8vpgb" path="res://graphics/electronLove/electron_seul1-2.png" id="12_frrc3"]
+[ext_resource type="Texture2D" uid="uid://pi3uyd734uff" path="res://graphics/electronLove/electron_seul1-3.png" id="13_7ml5u"]
+[ext_resource type="Texture2D" uid="uid://cy77r0utx2tvr" path="res://graphics/electronLove/electron_seul1-4.png" id="14_ic6nj"]
+[ext_resource type="Texture2D" uid="uid://c53um0m2t8vyd" path="res://graphics/electronLove/electron_seul1-5.png" id="15_wm0vf"]
+[ext_resource type="Texture2D" uid="uid://lcb7j7sijjf6" path="res://graphics/electronLove/electron_seul1-6.png" id="16_yi8rq"]
+[ext_resource type="Texture2D" uid="uid://4tmfysjqimwd" path="res://graphics/electronLove/electron_seul1-7.png" id="17_i624u"]
+[ext_resource type="Texture2D" uid="uid://s5yhrxqjaknw" path="res://graphics/electronLove/electron_seul1-8.png" id="18_m76c6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vsdpa"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"FindLabyrinthe",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5kt1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mc4c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kyl23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x4k0d")
+}],
+"loop": true,
+"name": &"Title",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmyms"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_vsdpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f0i7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tb0s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_41t5q")
+}],
+"loop": true,
+"name": &"findLabyrinthe",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fkekn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ss2ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_frrc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7ml5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ic6nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wm0vf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_yi8rq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i624u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_m76c6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="TitleCard" type="Control"]
 layout_mode = 3
@@ -10,8 +104,46 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 2360.0
-offset_bottom = 712.0
-texture = ExtResource("1_eas1s")
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_33kiy")
+expand_mode = 3
+
+[node name="Title" type="AnimatedSprite2D" parent="."]
+position = Vector2(601, 79.25)
+scale = Vector2(0.411017, 0.218399)
+sprite_frames = SubResource("SpriteFrames_vsdpa")
+animation = &"Title"
+autoplay = "Title"
+frame_progress = 0.411372
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(644, 251.5)
+scale = Vector2(0.457627, 0.293539)
+sprite_frames = SubResource("SpriteFrames_cmyms")
+animation = &"findLabyrinthe"
+autoplay = "findLabyrinthe"
+frame_progress = 0.281157
+
+[node name="ButtonGoBackToStartMenu" parent="." instance=ExtResource("10_f0i7h")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.44
+anchor_top = 0.687
+anchor_right = 0.936
+anchor_bottom = 0.856
+offset_left = -0.200012
+offset_top = 13.36
+offset_right = -0.199951
+offset_bottom = -0.320068
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(262, 510)
+scale = Vector2(0.710568, 0.77799)
+sprite_frames = SubResource("SpriteFrames_fkekn")
+autoplay = "default"
