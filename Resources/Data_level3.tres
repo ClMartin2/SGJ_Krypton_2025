@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DataLevel" load_steps=2 format=3 uid="uid://x6bbsvu77f1s"]
+[gd_resource type="Resource" script_class="DataLevel" load_steps=3 format=3 uid="uid://x6bbsvu77f1s"]
 
 [ext_resource type="Script" uid="uid://c5po5byxxp4s0" path="res://Scripts/Ressources/R_DataLevele.gd" id="1_5jd7y"]
+[ext_resource type="Texture2D" uid="uid://clynhxnbu1hn7" path="res://graphics/StartBanner/bandeau_3.png" id="2_qmm04"]
 
 [resource]
 script = ExtResource("1_5jd7y")
 txtStartLevel = "Déménagement"
 txtEndLevel = "Quelque chose a changé. Dans ce nouveau métal appelé Niobium, vos déplacements sont devenus plus fluides. Puis, en baissant la température… un phénomène remarquable s’est produit : la supraconductivité ! Les électrons se sont liés en paires de Cooper, glissant à travers le labyrinthe sans aucune résistance. Vous venez de ressentir un transport parfait."
+startBanner = ExtResource("2_qmm04")
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"

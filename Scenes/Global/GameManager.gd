@@ -7,14 +7,18 @@ func ResumeGame():
 	GetPlayer().Resume()
 	
 func GetTxtEndLevel() -> String:
-	var dataLevel = load("res://Resources/Data_" + GetCurrentScene()
-	 +".tres") as DataLevel
-	return dataLevel.txtEndLevel
+	return GetDataRessource().txtEndLevel
 	
 func GetTxtStartLevel():
+	return GetDataRessource().txtStartLevel
+
+func GetDataRessource():
 	var dataLevel = load("res://Resources/Data_" + GetCurrentScene()
 	 +".tres") as DataLevel
-	return dataLevel.txtStartLevel
+	return dataLevel
+	
+func GetStartBanner():
+	return GetDataRessource().startBanner
 	
 func GetCurrentScene():
 	return SceneSwitcher.current_scene.name

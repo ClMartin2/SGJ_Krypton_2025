@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="DataLevel" load_steps=2 format=3 uid="uid://bijbgmjm0804o"]
+[gd_resource type="Resource" script_class="DataLevel" load_steps=3 format=3 uid="uid://bijbgmjm0804o"]
 
 [ext_resource type="Script" uid="uid://c5po5byxxp4s0" path="res://Scripts/Ressources/R_DataLevele.gd" id="1_cffrh"]
+[ext_resource type="Texture2D" uid="uid://cqysirmk3v7gv" path="res://graphics/StartBanner/bandeau_5.png" id="2_t8184"]
 
 [resource]
 script = ExtResource("1_cffrh")
 txtStartLevel = "Presque "
 txtEndLevel = "Vous avez tout tenté : vous avez baissé la température deux fois, esquivé les pièges, contourné les impuretés... Mais rien. La supraconductivité ne s’est jamais manifestée. Le niobium, malgré tout son potentiel, a besoin de conditions encore plus extrêmes pour devenir supraconducteur."
+startBanner = ExtResource("2_t8184")
 metadata/_custom_type_script = "uid://c5po5byxxp4s0"
