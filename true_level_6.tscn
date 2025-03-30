@@ -19,7 +19,7 @@ size = Vector2(646, 324)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qx5ij"]
 size = Vector2(154, 145)
 
-[node name="True_level_6" type="Node2D"]
+[node name="level6" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_4rtx3")

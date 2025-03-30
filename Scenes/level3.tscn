@@ -20,7 +20,7 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." instance=ExtResource("2_d77hw")]
 position = Vector2(-311, -1835)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D2" type="Camera2D" parent="Player"]
 zoom = Vector2(0.6, 0.6)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
