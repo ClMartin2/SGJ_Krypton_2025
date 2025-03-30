@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://dihyujii8gb3r"]
+
+[ext_resource type="Texture2D" uid="uid://cmbti0git8m75" path="res://graphics/Niveau_5.png" id="1_x3cfr"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="2_xpykx"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="3_tr6mf"]
+[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_tr6mf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kex1u"]
+size = Vector2(155, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfwgi"]
+size = Vector2(154, 147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0agk1"]
+size = Vector2(646, 324)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dm3u7"]
+size = Vector2(154, 145)
+
+[node name="True_level_5" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_x3cfr")
+metadata/_edit_lock_ = true
+
+[node name="Borders" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D"]
+polygon = PackedVector2Array(-1831, 1617, -2360, 1618, -2360, -1618, 1656, -1616, 1657, -309, 1746, -309, 1746, -165, 1655, -165, 1657, 321, 1747, 322, 1750, 466, 1656, 466, 1657, 1109, 593, 1110, 594, 619, 471, 619, 471, 476, 1211, 475, 1211, -1377, -150, -1376, -150, -1488, -542, -1488, -541, -1377, -1130, -1377, -1131, -1006, -541, -1005, -542, -704, -1519, -703, -1519, -848, -1439, -848, -1439, -1031, -1832, -1031, -1832, -849, -1753, -849, -1752, -702, -1832, -702, -1830, 323, -1744, 323, -1744, 467, -1897, 467, -1897, 358, -2137, 358, -2134, 1131, -1897, 1131, -1897, 1052, -1745, 1052, -1745, 1196, -1830, 1196)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D2"]
+polygon = PackedVector2Array(-1833, 1614, -1832, 1750, 2359, 1751, 2359, -1752, 1648, -1752, 1653, -1613, 2049, -1617, 2050, -668, 1975, -668, 1976, -523, 2048, -522, 2049, 78, 1974, 78, 1974, 225, 2049, 225, 2050, 1375, 1927, 1375, 1927, 1482, 203, 1483, 203, 1170, -830, 1171, -830, 101, 204, 101, 205, -298, 994, -301, 996, -444, 821, -445, 820, -1003, -152, -1003, -151, -703, 73, -701, 73, -329, -1440, -329, -1440, 321, -1532, 321, -1531, 466, -1377, 466, -1376, 358, -1133, 358, -1130, 1131, -1377, 1129, -1377, 1051, -1531, 1051, -1531, 1197, -1440, 1198, -1439, 1615)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+position = Vector2(-1646, 753)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
+position = Vector2(11.5, -8)
+shape = SubResource("RectangleShape2D_kex1u")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
+position = Vector2(-510, 868)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
+position = Vector2(-6, 1.5)
+shape = SubResource("RectangleShape2D_wfwgi")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Borders"]
+position = Vector2(-156, 649)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D5"]
+position = Vector2(36, -11)
+shape = SubResource("RectangleShape2D_0agk1")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Borders"]
+position = Vector2(904, 86)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D6"]
+position = Vector2(12, 1.5)
+shape = SubResource("RectangleShape2D_dm3u7")
+
+[node name="Player" parent="." instance=ExtResource("2_xpykx")]
+position = Vector2(-1587, 1457)
+
+[node name="halo" parent="." instance=ExtResource("3_tr6mf")]
+position = Vector2(-3537, -370)
+
+[node name="UI" parent="." instance=ExtResource("4_tr6mf")]

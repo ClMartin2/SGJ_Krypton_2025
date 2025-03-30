@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfvnq2aa1q4si"]
+
+[ext_resource type="Texture2D" uid="uid://cm4862xukfp33" path="res://graphics/Niveau_4.png" id="1_lek0q"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://scenes/player.tscn" id="2_nicvv"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://scenes/halo.tscn" id="3_0saex"]
+[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://scenes/ui.tscn" id="4_nicvv"]
+
+[node name="True_level_4" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lek0q")
+metadata/_edit_lock_ = true
+
+[node name="Borders" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D"]
+polygon = PackedVector2Array(-1770, 1613, -2360, 1613, -2361, -1622, 2355, -1617, 2358, 1137, 308, 1137, 308, 1004, 1311, 1004, 1311, 622, 308, 624, 308, 488, 693, 488, 692, -204, 1270, -204, 1272, 486, 2249, 486, 2249, -1406, -450, -1408, -450, -718, -1772, -716, -1770, 363, -2083, 363, -2085, 1156, -1770, 1158)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D2"]
+polygon = PackedVector2Array(-1774, 1612, -1774, 1795, 2505, 1796, 2504, 1132, 2353, 1132, 2353, 1519, -96, 1520, -96, 106, 293, 106, 293, -584, 1665, -584, 1665, 102, 1848, 102, 1848, -1028, -52, -1028, -53, -334, -1369, -333, -1369, 364, -1055, 364, -1055, 572, -286, 574, -286, 953, -1053, 953, -1053, 1160, -1370, 1160, -1371, 1615)
+
+[node name="Player" parent="." instance=ExtResource("2_nicvv")]
+position = Vector2(-1587, 1457)
+
+[node name="halo" parent="." instance=ExtResource("3_0saex")]
+position = Vector2(-2945, -528)
+
+[node name="UI" parent="." instance=ExtResource("4_nicvv")]
