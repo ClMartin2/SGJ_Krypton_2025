@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://pe20iw8jrcyw"]
+
+[ext_resource type="Texture2D" uid="uid://bgf8avr0sn1in" path="res://graphics/Niveau_1.png" id="1_w6pi2"]
+[ext_resource type="PackedScene" uid="uid://dqsmlcdacnbjk" path="res://Scenes/halo.tscn" id="2_1fj1e"]
+[ext_resource type="PackedScene" uid="uid://bfao8blfjbm3n" path="res://Scenes/player.tscn" id="3_wlo63"]
+[ext_resource type="PackedScene" uid="uid://xd571vfuq6v" path="res://Scenes/ui.tscn" id="4_vnh7n"]
+[ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="5_1fj1e"]
+[ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://Scenes/SpawnerElectrons.tscn" id="6_wlo63"]
+
+[node name="level1" type="Node2D"]
+
+[node name="BG" type="Sprite2D" parent="."]
+texture = ExtResource("1_w6pi2")
+metadata/_edit_lock_ = true
+
+[node name="Borders" type="Node2D" parent="."]
+position = Vector2(-2681, 972)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D"]
+position = Vector2(2581, -972)
+polygon = PackedVector2Array(-1860, 1615, -2257, 1615, -2245, -1629, 2443, -1619, 2459, -853, 1636, -853, 1636, -726, 1481, -726, 1481, -852, 1155, -851, 1155, -1116, -74, -1115, -72, -436, 450, -436, 451, -279, -71, -276, -72, -138, -1730, -136, -1731, -4, -1856, -2, -1856, 1616)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders/StaticBody2D2"]
+polygon = PackedVector2Array(720, 640, 720, 789, 5174, 797, 5174, -1861, 5033, -1861, 5037, -1422, 4001, -1423, 4001, -1535, 3843, -1535, 3843, -1423, 3734, -1423, 3737, -708, 2770, -707, 2770, -829, 2614, -829, 2615, -708, 1277, -707, 1277, -566, 1134, -565, 1135, -412, 1276, -411, 1278, 641)
+metadata/_edit_lock_ = true
+
+[node name="halo" parent="." instance=ExtResource("2_1fj1e")]
+position = Vector2(-2996, -822)
+
+[node name="Player" parent="." instance=ExtResource("3_wlo63")]
+position = Vector2(-1694, 1436)
+
+[node name="UI" parent="." instance=ExtResource("4_vnh7n")]
+
+[node name="VictoryZone" parent="." instance=ExtResource("5_1fj1e")]
+position = Vector2(2011, -652)
+rotation = 1.5708
+scale = Vector2(0.9, 0.9)
+
+[node name="SpawnerElectrons2" type="Node" parent="."]
+
+[node name="SpawnerElectrons" parent="SpawnerElectrons2" instance=ExtResource("6_wlo63")]
+position = Vector2(-1666, 197)
+radius = 150
+numberToSpawn = 15
+
+[node name="SpawnerElectrons2" parent="SpawnerElectrons2" instance=ExtResource("6_wlo63")]
+position = Vector2(644, -33)
+radius = 150
+numberToSpawn = 10
+
+[node name="SpawnerElectrons3" parent="SpawnerElectrons2" instance=ExtResource("6_wlo63")]
+position = Vector2(159, -839)
+radius = 150
+numberToSpawn = 10
