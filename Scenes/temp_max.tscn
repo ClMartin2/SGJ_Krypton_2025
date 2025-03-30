@@ -1,10 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy4o6rtp4hrv3"]
+[gd_scene load_steps=10 format=3 uid="uid://dy4o6rtp4hrv3"]
 
 [ext_resource type="Script" uid="uid://u4i8j85kyrwh" path="res://temp_max.gd" id="1_nyvpi"]
-[ext_resource type="Texture2D" uid="uid://72u3vilyn2cy" path="res://icon.svg" id="2_wtny5"]
+[ext_resource type="Texture2D" uid="uid://cq1ookopvpp4g" path="res://animations/froidchaud-1.png" id="2_3s6g3"]
+[ext_resource type="Texture2D" uid="uid://bpxje8k7k1gs8" path="res://animations/froidchaud-2.png" id="3_4p117"]
+[ext_resource type="Texture2D" uid="uid://dp4uxqyo1korl" path="res://animations/froidchaud-3.png" id="4_lhgyu"]
+[ext_resource type="Texture2D" uid="uid://dljqga5ugl2r1" path="res://animations/froidchaud-4.png" id="5_14uil"]
+[ext_resource type="Texture2D" uid="uid://o1fak3ir2pfa" path="res://animations/froidchaud-5.png" id="6_ns0gu"]
+[ext_resource type="Texture2D" uid="uid://bdnmkivxptcl8" path="res://animations/froidchaud-6.png" id="7_k20o6"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttayg"]
-size = Vector2(88, 60)
+[sub_resource type="CircleShape2D" id="CircleShape2D_1mcy3"]
+radius = 47.0425
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hmgf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3s6g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4p117")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lhgyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_14uil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ns0gu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k20o6")
+}],
+"loop": true,
+"name": &"fire",
+"speed": 5.0
+}]
 
 [node name="temp_max" type="Area2D"]
 light_mask = 8
@@ -12,11 +43,15 @@ visibility_layer = 2
 script = ExtResource("1_nyvpi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_ttayg")
+shape = SubResource("CircleShape2D_1mcy3")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.5, 0)
-scale = Vector2(0.679688, 0.46875)
-texture = ExtResource("2_wtny5")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_0hmgf")
+animation = &"fire"
+autoplay = "fire"
+frame_progress = 0.600116
+speed_scale = 2.5
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

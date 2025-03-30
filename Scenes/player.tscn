@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bfao8blfjbm3n"]
 
-[ext_resource type="Texture2D" uid="uid://c787pm3vk53c3" path="res://graphics/RondVert.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://ddpydqbwyhx1k" path="res://scenes/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://5mvtuylho30t" path="res://graphics/cooper1.png" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dobln41r8gn4f" path="res://graphics/electron-player.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dcd14xdhcpcov" path="res://graphics/love-player.png" id="3_dqkch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 13.0
@@ -13,13 +13,19 @@ visibility_layer = 7
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D_normal" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_3vyb7")
+position = Vector2(2.5, 4.5)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_qhqgy")
 
 [node name="Sprite2D2_super" type="Sprite2D" parent="."]
 visible = false
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("3_qhqgy")
+texture = ExtResource("3_dqkch")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_g2els")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
