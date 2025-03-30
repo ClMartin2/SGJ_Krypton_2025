@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckxqsxhtmyqvm"]
+[gd_scene load_steps=7 format=3 uid="uid://ckxqsxhtmyqvm"]
 
 [ext_resource type="Script" uid="uid://bo6d27p5mf7l8" path="res://Scripts/UI/ButtonLevel.gd" id="1_14ph0"]
 [ext_resource type="FontFile" uid="uid://bwkmo5ka1bq7f" path="res://Fonts/GameBubble.ttf" id="1_n30s0"]
+[ext_resource type="StyleBox" uid="uid://cou3epx7mmb70" path="res://UI/StyleBoxes/BtnLevelSelection/StyleBoxButtonLevelSelection.tres" id="2_hgtmo"]
 [ext_resource type="StyleBox" uid="uid://dmyw2k8m766u3" path="res://UI/StyleBoxes/StyleBoxButtonLevel.tres" id="3_cr2ki"]
+[ext_resource type="StyleBox" uid="uid://xs6kpi5xo4m8" path="res://UI/StyleBoxes/BtnLevelSelection/StyleBoxButtonLevelSelectionHover.tres" id="3_h51ai"]
+[ext_resource type="StyleBox" uid="uid://n7u3tuyo1was" path="res://UI/StyleBoxes/BtnLevelSelection/StyleBoxButtonLevelSelectionPressed.tres" id="4_7j66h"]
 
 [node name="Level" type="Button"]
 anchors_preset = 15
@@ -14,6 +17,17 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_n30s0")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = ExtResource("2_hgtmo")
+theme_override_styles/disabled_mirrored = ExtResource("2_hgtmo")
+theme_override_styles/disabled = ExtResource("2_hgtmo")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_h51ai")
+theme_override_styles/hover_pressed = ExtResource("3_h51ai")
+theme_override_styles/hover_mirrored = ExtResource("3_h51ai")
+theme_override_styles/hover = ExtResource("3_h51ai")
+theme_override_styles/pressed_mirrored = ExtResource("4_7j66h")
+theme_override_styles/pressed = ExtResource("4_7j66h")
+theme_override_styles/normal_mirrored = ExtResource("2_hgtmo")
+theme_override_styles/normal = ExtResource("2_hgtmo")
 text = "Level 1"
 script = ExtResource("1_14ph0")
 
