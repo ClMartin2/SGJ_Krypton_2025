@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://xd571vfuq6v"]
 
-[ext_resource type="Script" uid="uid://0kvhvtcegr7h" path="res://scenes/ui.gd" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://0kvhvtcegr7h" path="res://Scenes/ui.gd" id="1_nt7q6"]
 [ext_resource type="Texture2D" uid="uid://kqlsi1omiqwp" path="res://graphics/Thermometer/T_BackgroundThermometerpng.png" id="2_qdvrb"]
 [ext_resource type="Texture2D" uid="uid://ce3xmbx1q3wqk" path="res://graphics/Thermometer/FillThermometer.png" id="3_nf4gj"]
-[ext_resource type="Script" path="res://Scripts/UI/Thermometer.gd" id="4_2246s"]
+[ext_resource type="Script" uid="uid://cqrb3e40emuac" path="res://Scripts/UI/Thermometer.gd" id="4_2246s"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_nt7q6")

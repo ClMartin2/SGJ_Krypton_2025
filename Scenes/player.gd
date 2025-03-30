@@ -10,7 +10,6 @@ var canSuper = false
 func _ready() -> void:
 	add_to_group("electrons")
 	#get_tree().get_root().add_child(halo) # ajoute le halo une seule fois
-	#print("HALO AJOUTE?")
 	
 	
 #@onready var all_electrons = get_tree().get_nodes_in_group("electrons")
@@ -96,9 +95,7 @@ func _process(delta: float) -> void:
 		if distance < 500.0 and distance > 0.1:
 			var strength = 5000.0 / pow(distance, 2)
 			repulsion_force += diff.normalized() * strength * 1000
-			#print("rep force" + str(repulsion_force))
-			
-	#print(str(repulsion_force.length()))
+
 	vel += repulsion_force * delta
 	
 	# 🧱 Limiter la vitesse max ici
