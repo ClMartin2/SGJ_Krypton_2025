@@ -15,5 +15,6 @@ theme_override_font_sizes/font_size = 100
 text = "Go back to menu"
 script = ExtResource("2_vn5i6")
 refMenu = ExtResource("3_h25ut")
+scene_path = "res://Scenes/UI/StartMenu.tscn"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
