@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://xd571vfuq6v"]
+[gd_scene load_steps=5 format=3 uid="uid://xd571vfuq6v"]
 
-[ext_resource type="Script" uid="uid://0kvhvtcegr7h" path="res://scenes/ui.gd" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://0kvhvtcegr7h" path="res://Scenes/ui.gd" id="1_nt7q6"]
+[ext_resource type="Texture2D" uid="uid://kqlsi1omiqwp" path="res://graphics/Thermometer/T_BackgroundThermometerpng.png" id="2_qdvrb"]
+[ext_resource type="Texture2D" uid="uid://ce3xmbx1q3wqk" path="res://graphics/Thermometer/FillThermometer.png" id="3_nf4gj"]
+[ext_resource type="Script" uid="uid://cqrb3e40emuac" path="res://Scripts/UI/Thermometer.gd" id="4_2246s"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_nt7q6")
@@ -37,3 +40,19 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "-"
+
+[node name="Thermometer" type="TextureProgressBar" parent="."]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -199.0
+offset_top = 26.0
+offset_right = -29.0
+offset_bottom = 151.0
+grow_horizontal = 0
+value = 100.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("2_qdvrb")
+texture_progress = ExtResource("3_nf4gj")
+script = ExtResource("4_2246s")
