@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d0ott02wp06y8" path="res://Scenes/electron.tscn" id="4_pmbmg"]
 [ext_resource type="PackedScene" uid="uid://n53injmxv20a" path="res://Scenes/SpawnerElectrons.tscn" id="5_h7oot"]
 [ext_resource type="PackedScene" uid="uid://cnrvihegxivkm" path="res://Scenes/VictoryZone.tscn" id="6_mnpdm"]
-[ext_resource type="PackedScene" uid="uid://djqncxc7s00ts" path="res://Scenes/Impurity.tscn" id="7_o74cx"]
+[ext_resource type="PackedScene" uid="uid://djqncxc7s00ts" path="res://Scenes/Impurity/Impurity1.tscn" id="7_o74cx"]
 
 [node name="Level5" type="Node2D"]
 
