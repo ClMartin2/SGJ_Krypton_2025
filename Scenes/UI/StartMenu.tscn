@@ -69,7 +69,9 @@ levelToLoad = ExtResource("6_f3otk")
 [node name="Level4" parent="Control/GridContainer" instance=ExtResource("1_q0ago")]
 layout_mode = 2
 text = "Level 4"
+levelToLoad = ExtResource("4_k44vq")
 
 [node name="Level5" parent="Control/GridContainer" instance=ExtResource("1_q0ago")]
 layout_mode = 2
 text = "Level 5"
+levelToLoad = ExtResource("4_k44vq")
