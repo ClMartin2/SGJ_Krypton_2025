@@ -16,4 +16,5 @@ func _ready() -> void:
 func _on_body_entered(_body: Node2D) -> void:
 		#pass # Replace with function body.
 	print("body ENTERED max")
-	Global.temperature += 10
+	if (Global.temperature < -100):
+		Global.temperature += 10

@@ -3,6 +3,7 @@ class_name Player
 
 var vel = Vector2(0.5,0.5)
 var pause = false;
+var canSuper = false
 
 #@onready var halo = preload("res://halo.tscn").instantiate()
 
@@ -45,7 +46,17 @@ func _process(delta: float) -> void:
 	var all_electrons = get_tree().get_nodes_in_group("electrons")
 	var acceleration = Input.get_vector("left","right", "up", "down")
 	
-	if (Input.is_action_just_pressed("launch_super")) :
+	var target = get_closest_electron()
+	
+	if (target and Global.temperature <= Global.minSuperTemp):
+		print("CAN SUPER")
+		Global.canSuper = true
+	else:
+		print("NO SUPER")
+		Global.canSuper = false
+		
+	
+	if (Input.is_action_just_pressed("launch_super") and Global.canSuper) :
 		Global.superconduct = !Global.superconduct
 		print("pressed - SUPER")
 	
@@ -57,7 +68,7 @@ func _process(delta: float) -> void:
 		rotation = 0
 	
 	# RECHERCHE DE CLOSEST POUR HALO
-	var target = get_closest_electron()
+	
 	if target:
 		$"../halo".global_position = target.global_position
 		$"../halo".visible = true
@@ -89,9 +100,12 @@ func _process(delta: float) -> void:
 	
 	# 🧱 Limiter la vitesse max ici
 	var max_speed = 1200 + (Global.temperature * 5)
+	var min_speed = max_speed - 200
 	#var max_speed = 300
 	if vel.length() > max_speed:
 		vel = vel.normalized() * max_speed
+	if vel.length() < min_speed:
+		vel = vel.normalized() * min_speed
 		
 	
 	if Global.superconduct:

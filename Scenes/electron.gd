@@ -47,9 +47,13 @@ func _process(delta: float) -> void:
 	
 		# 🧱 Limiter la vitesse max ici
 	var max_speed = 1200 + (Global.temperature * 5)
+	var min_speed = max_speed - 200
 	#var max_speed = 300
 	if vel.length() > max_speed:
 		vel = vel.normalized() * max_speed
+	if vel.length() < min_speed:
+		vel = vel.normalized() * min_speed
+		
 	var collision = move_and_collide(vel * delta)
 	
 	if collision:

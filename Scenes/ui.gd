@@ -12,3 +12,12 @@ func _process(_delta: float) -> void:
 		$MarginContainer/Label.text = "Temperature = " + str(Global.temperature) + "°c " + "SUPER"
 	else :
 		$MarginContainer/Label.text = "Temperature = " + str(Global.temperature) + "°c "
+	
+	if (Global.superconduct):
+		$MarginContainer2/Label.text = "Cooper LOVE !!!"
+	elif Global.canSuper:
+		$MarginContainer2/Label.text = "Cooper available - SPACE BAR"
+	elif (Global.temperature <= Global.minSuperTemp):
+		$MarginContainer2/Label.text = "It's chilly find LOVE!"
+	else:
+		$MarginContainer2/Label.text = ""
